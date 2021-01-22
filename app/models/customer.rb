@@ -3,8 +3,8 @@ class Customer < ApplicationRecord
   has_many :reviews
   has_many :businesses, through: :reviews
   has_many :categories, through: :reviews
-  helper_method :location
+  #helper_method :location
 
-  def location
-  end
+  #def location
+  #end
 end

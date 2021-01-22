@@ -3,12 +3,11 @@ class Business < ApplicationRecord
   belongs_to :category
   has_many :reviews
   has_many :customers, through: :reviews
-  #valid name...
-  helper_method :location, :average_rating
+  #helper_method :location, :average_rating
 
-  def location
-  end
+  #def location
+  #end
 
-  def average_rating
-  end
+  #def average_rating
+  #end
 end
