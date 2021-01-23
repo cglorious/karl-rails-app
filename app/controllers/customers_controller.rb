@@ -1,4 +1,6 @@
 class CustomersController < ApplicationController
+  skip_before_action :verified_user, only: [:new, :create]
+
   def new
     @customer = Customer.new
   end
