@@ -7,13 +7,8 @@
   </head>
 <body>
 <h2>Sign Up for Reviewer</h2>
-<h4><em> Connect with great local businesses </em></h4>
 
-<p><Button type="button">Continue with Facebook</button></p>
-<p><Button type="button">Continue with Google</button></p>
-<p><Button type="button">Continue with Apple</button></p>
-<p>or</p>
-<br>
+<%= render 'session/form' %>
 
   <%= form_for(@customer) do |f| %>
     <div>
@@ -22,7 +17,7 @@
     <br>
     <div>
     <%= f.label :email %><br>
-    <%= f.email_field :email %></div>
+    <%= f.email_field :email, required: true %></div>
     <br>
     <div>
     <%= f.label :password %><br>

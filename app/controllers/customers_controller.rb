@@ -4,10 +4,16 @@ class CustomersController < ApplicationController
   end
 
   def create
-    "hello world"
+    if (customer = Customer.create(customer_params))
+      session[:user_id] = customer.id
+      redirect_to customer_path(customer)
+    else
+      render new_customer
+    end
   end
 
   def show
+    @customer = Customer.find_by(id: params[:id])
   end
 
   private

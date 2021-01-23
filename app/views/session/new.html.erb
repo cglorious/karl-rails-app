@@ -1,1 +1,29 @@
-<p> Login at This is session#new </p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      <link rel="stylesheets" href="customers.scss">
+    </style>
+  </head>
+  <body>
+    <h2>Log in to Reviewer</h2>
+    <h4> New to Reviewer? <a href="/signup">Sign up</a></h4>
+
+    <%= render 'form' %>
+
+    <%= form_tag('/session', method: :post) do %>
+      <div>
+        <%= label_tag :email %><br>
+        <%= text_field_tag :email %>
+      </div>
+      <br>
+      <div>
+        <%= label_tag :password %><br>
+        <%= password_field_tag :password %>
+      </div>
+
+      <p><%= submit_tag("Log in")%></p>
+
+    <% end %>
+  </body>
+</html>
