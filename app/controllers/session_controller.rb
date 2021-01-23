@@ -3,11 +3,13 @@ class SessionController < ApplicationController
   end
 
   def create
-    if @customer = Customer.find_by(email: params[:email])
-      session[:user_id] = @customer.id
-      redirect_to customer_path(@customer)
+    customer = Customer.find_by(email: params[:email])
+    if customer && customer.authenticate(params[:password])
+      session[:user_id] = customer.id
+      redirect_to customer_path(customer)
     else
-      redirect_to '/signup'
+      flash[:message] = "Please input correct login information."
+      redirect_to '/login'
     end
   end
 
