@@ -1,1 +1,17 @@
-<p>reviews#index</p>
+<h3>
+<% if @customer %>
+  Reviews by <%= @customer.name %>
+<% elsif @business %>
+  Reviews of <%= @business.name %>
+<% else %>
+  All Reviews
+<% end %>
+</h3>
+
+<% @reviews.each do |r| %>
+  <p><em><%= r.customer.name %></em> wrote a review.</p>
+  <p><strong><%= r.business.name %></strong></p>
+  <p>Rating: <%= r.rating %></p>
+  <p><%= r.content %></p>
+  <br>
+<% end %>

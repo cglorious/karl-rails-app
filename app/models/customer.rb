@@ -9,8 +9,3 @@ class Customer < ApplicationRecord
   #def location
   #end
 end
-
-#Nested routes
-
-#'customers/:id/reviews'
-#'customers/:id/businesses'

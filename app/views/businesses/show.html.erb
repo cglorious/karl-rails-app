@@ -1,0 +1,6 @@
+<h4><%= @business.name %></h4>
+<p><%= @business.city %>, <%= @business.state %></p>
+<p><%= @business.category.name %></p>
+<p>Price Range: <%= @business.price_range %></p>
+
+<p><%= link_to "Add a Review", new_business_review_path(@business) %></p>

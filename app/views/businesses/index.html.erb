@@ -1,12 +1,13 @@
 <h1>Businesses</h1>
 
 <% @businesses.each do |b| %>
-  <%= b.name %>
-  <%= b.phone_number %>
-  <%= b.city %>
-  <%= b.state %>
-  <%= b.price_range %>
-  <%= b.rating %>
+  <div>
+    <h4><%=link_to b.name, business_path(b) %></h4>
+    <!-- add link to show page -->
+    <p><%= b.city %>, <%= b.state %></p>
+    <p><%= b.category.name %></p>
+    <p>Price Range: <%= b.price_range %></p>
+  </div>
 <% end %>
 
-<%= link_to "Add a Business", new_business_path %>
+<p><%= link_to "Add a Business", new_business_path %></p>

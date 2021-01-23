@@ -10,15 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_22_234613) do
+ActiveRecord::Schema.define(version: 2021_01_23_222313) do
 
   create_table "businesses", force: :cascade do |t|
     t.string "name"
-    t.integer "phone_number"
     t.string "city"
     t.string "state"
-    t.float "price_range"
-    t.float "rating"
+    t.integer "price_range"
     t.integer "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -44,7 +42,6 @@ ActiveRecord::Schema.define(version: 2021_01_22_234613) do
   create_table "reviews", force: :cascade do |t|
     t.text "content"
     t.integer "rating"
-    t.date "review_date"
     t.integer "customer_id", null: false
     t.integer "business_id", null: false
     t.datetime "created_at", precision: 6, null: false
