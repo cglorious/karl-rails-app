@@ -9,18 +9,18 @@ class BusinessesController < ApplicationController
   end
 
   def create
-    business = category.businesses.build(business_params))
+    business = Business.create(business_params)
     if business.save
       redirect_to business_path(business)
     else
-      render new_business
+      render new_business_path
     end
   end
 
   private
 
   def business_params
-    params.require(:business).permit(:name, :phone_number, :city, :state, :price_range, :category_id)
+    params.require(:business).permit(:name, :phone_number, :city, :state, :price_range)
   end
 
 end
