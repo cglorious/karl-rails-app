@@ -12,3 +12,6 @@ class Business < ApplicationRecord
   #def average_rating
   #end
 end
+
+#Nested routes
+#'businesses/:id/customers'
