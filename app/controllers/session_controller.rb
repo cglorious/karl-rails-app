@@ -1,10 +1,12 @@
 class SessionController < ApplicationController
+  skip_before_action :verified_user
+
   def new
   end
 
   def create
-    customer = Customer.find_by(email: params[:user][:email])
-    if customer && customer.authenticate(params[:user][:password])
+    customer = Customer.find_by(email: params[:customer][:email])
+    if customer && customer.authenticate(params[:customer][:password])
       session[:user_id] = customer.id
       redirect_to customer_path(customer)
     else

@@ -13,7 +13,7 @@
 
     <p><%= flash[:message] if flash[:message] %></p>
 
-    <%= form_for :user do |f| %>
+    <%= form_for :customer do |f| %>
       <div>
         <%= f.label :email %><br>
         <%= f.email_field :email, required: true %>

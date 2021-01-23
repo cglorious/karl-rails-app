@@ -1,7 +1,1 @@
-<ul>
-  <li><a class="navbar-brand"rel="nofollow" data-method="delete" href="/logout">Log Out</a></li>
-  <li><a class="navbar-brand" href="/users/show">My Profile</a></li>
-  <li><a class="navbar-brand" href="http://127.0.0.1:3000">Home</a></li>
-</ul>
-
-<p>Welcome, <%= @customer.name %>!</p>
+<p>Welcome, <%= current_user.name %>!</p>
