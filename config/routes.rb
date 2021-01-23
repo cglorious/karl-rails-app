@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  get '/signup', to: 'customers#new'
+  root 'static#home'
+  get '/login', to: 'session#new'
+
   resources :categories
   resources :reviews
   resources :customers
