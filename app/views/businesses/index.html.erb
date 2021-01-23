@@ -1,0 +1,10 @@
+<h1>Businesses</h1>
+
+<% @businesses.each do |b| %>
+  <%= b.name %>
+  <%= b.phone_number %>
+  <%= b.city %>
+  <%= b.state %>
+  <%= b.price_range %>
+  <%= b.rating %>
+<% end %>

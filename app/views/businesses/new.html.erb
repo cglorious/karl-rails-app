@@ -1,0 +1,25 @@
+<h1>Add a new Business</h1>
+
+<%= form_for(@business) do |f| %>
+
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :phone_number %><br>
+  <%= f.text_field :phone_number %>
+  <br>
+  <%= f.label :city %><br>
+  <%= f.text_field :city %>
+  <br>
+  <%= f.label :state %><br>
+  <%= f.text_field :state %>
+  <br>
+  <%= f.label :price_range %><br>
+  <%= f.text_field :rating %>
+  <br>
+  <%= f.label :rating %><br>
+  <%= f.text_field :rating %>
+  <br>
+
+  <p><%= f.submit %></p>
+<% end %>
