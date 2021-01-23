@@ -3,8 +3,8 @@ class SessionController < ApplicationController
   end
 
   def create
-    customer = Customer.find_by(email: params[:email])
-    if customer && customer.authenticate(params[:password])
+    customer = Customer.find_by(email: params[:user][:email])
+    if customer && customer.authenticate(params[:user][:password])
       session[:user_id] = customer.id
       redirect_to customer_path(customer)
     else

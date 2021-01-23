@@ -11,7 +11,7 @@
 
     <%= render 'form' %>
 
-    <%= flash[:message] %>
+    <p><%= flash[:message] if flash[:message] %></p>
 
     <%= form_for :user do |f| %>
       <div>
