@@ -8,8 +8,8 @@
 [x] As Hermione, I want to login so I can use my account.
 [x] As Hermione, I want to logout so I can I can protect my information.
 [x] As Hermione, I want to be able to have an account that is unique to my email address.
-[ ] As Hermione, I want to have an admin account so I can add a business.
 [ ] As Ron, I want to use my Facebook credentials so I can sign in to the app easily.
+[ ] As Ron, I want to sign up with only my name, email, and password and update my profile later so I can sign in quickly.
 [x] As Ron, I want to have access to a navigation bar so I can view my profile, the homepage, and log out at anytime.
 
 ### My Profile
@@ -23,7 +23,7 @@
 [ ] As Harry, I want to determine a restaurant's average rating so I can decide whether I want to buy food from that restaurant.
 [x] As Harry, I want to add a review for a restaurant so I can provide a rating to help other customers make a meal decision.
 [x] As Harry, I want to access another person's reviews so I can see which restaurants they recommend.
-[ ] As Hagrid, I want to have admin access so I can add a business.
+[x] As Hagrid, I want to have admin access so I can add a business.
 [ ] As Hagrid, I want to edit my reviews.
 [ ] As Myrtle, I want to delete my reviews.
 

@@ -14,7 +14,6 @@ class BusinessesController < ApplicationController
 
   def create
     business = Business.create(business_params)
-    #unable to locate category
     if business.save
       redirect_to business_path(business)
     else
@@ -29,7 +28,7 @@ class BusinessesController < ApplicationController
   private
 
   def business_params
-    params.require(:business).permit(:name, :city, :state, :price_range, :category)
+    params.require(:business).permit(:name, :city, :state, :price_range, :category_id)
   end
 
 end
