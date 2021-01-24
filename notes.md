@@ -19,7 +19,7 @@
 ### Business, Reviews
 [x] As Harry, I want to view a restaurant's page so I can read reviews from other customers.
 [ ] As Harry, I want to determine a restaurant's average rating so I can decide whether I want to buy food from that restaurant.
-[ ] As Harry, I want to add a review for a restaurant so I can provide a rating to help other customers make a meal decision.
+[x] As Harry, I want to add a review for a restaurant so I can provide a rating to help other customers make a meal decision.
 [x] As Harry, I want to access another person's reviews so I can see which restaurants they recommend.
 
 ### Categories

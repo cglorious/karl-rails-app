@@ -10,6 +10,7 @@ class BusinessesController < ApplicationController
 
   def create
     business = Business.create(business_params)
+    #unable to locate category
     if business.save
       redirect_to business_path(business)
     else

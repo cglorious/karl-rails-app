@@ -1,23 +1,27 @@
 <h1>Add a new Business</h1>
 <!-- For admin access only -->
 <%= form_for(@business) do |f| %>
-
+  <div>
   <%= f.label :name %><br>
   <%= f.text_field :name %>
+  </div>
   <br>
+  <div>
   <%= f.label :city %><br>
   <%= f.text_field :city %>
+  </div>
   <br>
+  <div>
   <%= f.label :state %><br>
   <%= f.text_field :state %>
+  </div>
   <br>
-  <p>Choose a range from 1-4, 4 being the most expensive.</p>
-  <!-- How to make options only from 1-4? -->
+  <!-- How to make drop down only from 1-4? -->
   <%= f.label :price_range %><br>
   <%= f.text_field :price_range %>
   <br>
-  <p>Choose a category:</p>
-  <!-- category collection option -->
+  <p><%= collection_select(:business, :name, Category.all, :name, :name, prompt: "Choose a category") %></p>
+  <!-- category not being set -->
 
   <p><%= f.submit %></p>
 <% end %>
