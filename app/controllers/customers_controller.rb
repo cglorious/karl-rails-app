@@ -44,7 +44,8 @@ class CustomersController < ApplicationController
       :email,
       :password,
       :city,
-      :state
+      :state,
+      :admin
     )
   end
 

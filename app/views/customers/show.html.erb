@@ -11,7 +11,13 @@
         <img id="profile-pic" src="https://images.squarespace-cdn.com/content/v1/575a6067b654f9b902f452f4/1552683653140-0UUVQSSUEWVC73AWAEQG/ke17ZwdGBToddI8pDm48kP06O0_IHyRXSOOiqwgWaApZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVEsL0EX72Q6S7TgfQYQBQpkz5xM6Qt8VXd_xJGg_ziCFib8BodarTVrzIWCp72ioWw/300Logo.png?format=750w" alt="Dog">
         <div>
           <br><br><br><br><br>
-          <h1><%= current_user.name %></h1>
+
+          <% if current_user.admin? %>
+            <h1><%= current_user.name + ", admin" %></h1>
+          <% else %>
+            <h1><%= current_user.name %></h1>
+          <% end %>
+
           <p> <%= current_user.city %>, <%= current_user.state %> </p>
           <p> Number of reviews: <%= current_user.reviews.count %> </p>
         <div>
@@ -24,6 +30,14 @@
     </section>
 
     <!-- add hover effect over buttons -->
+
+    <% if current_user.admin? %>
+
+    <section class="options-block" style="background-color: #D32323;">
+      <p><a class="options-url" href=<%= new_business_path %>><button class="options-btn"  >Add A Business</button></a></p>
+    </section>
+
+    <% end %>
 
   </body>
 </html>

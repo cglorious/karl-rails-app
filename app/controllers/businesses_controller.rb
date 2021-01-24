@@ -5,7 +5,11 @@ class BusinessesController < ApplicationController
   end
 
   def new
-    @business = Business.new
+    if current_user.admin?
+      @business = Business.new
+    else
+      redirect_to businesses_path
+    end
   end
 
   def create

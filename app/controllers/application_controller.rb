@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :verified_user
-  helper_method :current_user, :logged_in?
+  helper_method :current_user, :logged_in?, :admin?
 
   private
 
@@ -15,5 +15,10 @@ class ApplicationController < ActionController::Base
   def verified_user
     redirect_to root_path unless logged_in?
   end
+
+  def admin?
+    !!current_user.admin
+  end
+
 
 end
