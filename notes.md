@@ -7,7 +7,7 @@
 [x] As Hermione, I want to sign up so I can create my account.
 [x] As Hermione, I want to login so I can use my account.
 [x] As Hermione, I want to logout so I can I can protect my information.
-[ ] As Hermione, I want to be able to have an account that is unique to my email address.
+[x] As Hermione, I want to be able to have an account that is unique to my email address.
 [ ] As Hermione, I want to have an admin account so I can add a business.
 [ ] As Ron, I want to use my Facebook credentials so I can sign in to the app easily.
 [x] As Ron, I want to have access to a navigation bar so I can view my profile, the homepage, and log out at anytime.

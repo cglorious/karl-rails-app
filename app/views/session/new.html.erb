@@ -13,9 +13,9 @@
           <h2 class="session-header">Log in to Reviewer</h2>
           <h4> New to Reviewer? <a href="/signup">Sign up</a></h4>
 
-          <%= render 'form' %>
+          <%= render 'btns' %>
 
-          <p><%= flash[:message] if flash[:message] %></p>
+          <p style="color:red;"><em><%= flash[:message] if flash[:message] %></em></p>
 
           <%= form_for :customer do |f| %>
             <%= f.label :email %><br>

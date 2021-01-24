@@ -1,0 +1,24 @@
+<p> Edit your profile, <%= @customer.name %> </p>
+
+<%= form_for(@customer) do |f| %>
+<div>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</div>
+<br>
+<div>
+  <%= f.label :city %><br>
+  <%= f.text_field :city %>
+</div>
+<br>
+<div>
+  <%= f.label :state %><br>
+  <%= f.text_field :state %>
+</div>
+<br>
+
+<p><%= f.submit "Edit"%></p>
+
+<% end %>
+
+<a data-method="delete" href="/delete">Delete Account</a>

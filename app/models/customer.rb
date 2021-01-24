@@ -4,8 +4,7 @@ class Customer < ApplicationRecord
   has_many :businesses, through: :reviews
   has_many :categories, through: :reviews
   has_secure_password
-  #helper_method :location
+  validates :email, uniqueness: true
+  validates :name, presence: true
 
-  #def location
-  #end
 end

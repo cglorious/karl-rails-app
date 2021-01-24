@@ -10,7 +10,7 @@ class SessionController < ApplicationController
       session[:user_id] = customer.id
       redirect_to customer_path(customer)
     else
-      flash[:message] = "Please input correct login information."
+      flash[:message] = "Please enter correct log in information."
       redirect_to '/login'
     end
   end

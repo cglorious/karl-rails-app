@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get '/login', to: 'session#new'
   post '/login', to: 'session#create'
   delete '/logout', to: 'session#destroy'
+  #remove /logout path?
+  delete '/delete', to: 'customers#destroy'
+  #remove /logout path?
 
   resources :categories do
     resources :businesses, only: [:new, :create, :index]
