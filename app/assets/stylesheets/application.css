@@ -61,7 +61,7 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    display: table;
    clear: both;
  }
- .block {
+ .block-btn {
    width: 60%;
    border: none;
    color: white;
@@ -85,7 +85,7 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
  }
  #google:hover{
    opacity: 0.75;
-   background-color: lightgray;
+   background-color: #E0E0E0;
    color: black;
  }
  #apple{

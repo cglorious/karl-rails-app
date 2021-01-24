@@ -6,13 +6,23 @@
     </style>
   </head>
   <body>
-    <div class="current-user-block">
-      <h1><%= current_user.name %></h1>
-      <p> <%= current_user.city %>, <%= current_user.state %> </p>
-      <p> Number of reviews: <%= current_user.reviews.count %> </p>
-    </div>
+    <section class="current-user-block">
+      <div>
+        <img id="profile-pic" src="https://images.squarespace-cdn.com/content/v1/575a6067b654f9b902f452f4/1552683653140-0UUVQSSUEWVC73AWAEQG/ke17ZwdGBToddI8pDm48kP06O0_IHyRXSOOiqwgWaApZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVEsL0EX72Q6S7TgfQYQBQpkz5xM6Qt8VXd_xJGg_ziCFib8BodarTVrzIWCp72ioWw/300Logo.png?format=750w" alt="Dog">
+        <div>
+          <br><br><br><br><br>
+          <h1><%= current_user.name %></h1>
+          <p> <%= current_user.city %>, <%= current_user.state %> </p>
+          <p> Number of reviews: <%= current_user.reviews.count %> </p>
+        <div>
+      </div>
+    </section>
 
-    <p><%= link_to "Reviews", customer_reviews_path(current_user) %></p>
-    <p><%= link_to "Write a Review", businesses_path %></p>
+    <section class="options-block">
+      <p><a class="options-url" href="/customers/1/reviews"><button class="options-btn">Reviews</button></a></p>
+      <p><a class="options-url" href="/businesses"><button class="options-btn" >Write a Review</button></a></p>
+    </section>
+
+
   </body>
 </html>

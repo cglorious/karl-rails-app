@@ -4,7 +4,35 @@
 body {
   text-align: left;
 }
-div.current-user-block{
+section.current-user-block{
   padding: 40px;
   background-color: #F5F5F5;
+  height: 400px;
+}
+img#profile-pic {
+  padding: .5em;
+  float: left;
+}
+.options-block{
+  padding: 40px;
+  background-color: #191919;
+  height: 200px;
+  color: white;
+  text-align: center;
+}
+a.options-url {
+  text-decoration: none;
+}
+.options-btn{
+     width: 60%;
+     border: none;
+     padding: 14px 28px;
+     background-color: #F5F5F5;
+     color: black;
+     font-weight: bold;
+}
+.options-btn:hover{
+  opacity: 0.75;
+  background-color: #E0E0E0;
+  color: black;
 }
