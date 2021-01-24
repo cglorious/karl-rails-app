@@ -7,7 +7,7 @@
 <p>Number of reviews: <%= @business.reviews.count %></p>
 <!-- Average Rating -->
 <% @business.reviews.each do |r| %>
-  <p><em><%= r.customer.name %></em> wrote a review.</p>
+  <p><em><%=link_to r.customer.name, customer_reviews_path(r.customer) %></em> wrote a review.</p>
   <p>Rating: <%= r.rating %></p>
   <p><%= r.content %></p>
   <br>

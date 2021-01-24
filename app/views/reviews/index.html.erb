@@ -10,8 +10,7 @@
 </h3>
 
 <% @reviews.each do |r| %>
-  <p><em><%= r.customer.name %></em> wrote a review.</p>
-  <p><strong><%= r.business.name %></strong></p>
+  <p><strong><%= link_to r.business.name, business_path(r.business) %></strong></p>
   <p>Rating: <%= r.rating %></p>
   <p><%= r.content %></p>
   <br>
