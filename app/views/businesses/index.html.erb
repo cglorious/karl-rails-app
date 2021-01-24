@@ -1,5 +1,7 @@
-<h1>Businesses</h1>
+<h1>Your Next Review Awaits</h1>
+<p>Review your local businesses.</p>
 
+<h2>See the business you'd like to review?</h2>
 <% @businesses.each do |b| %>
   <div>
     <h4><%=link_to b.name, business_path(b) %></h4>

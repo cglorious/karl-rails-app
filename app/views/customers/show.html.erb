@@ -1,7 +1,18 @@
-<p>Welcome, <%= current_user.name %>!</p>
-<p> <%= current_user.city %>, <%= current_user.state %> </p>
-<p> Number of reviews: <%= current_user.reviews.count %> </p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      <link rel="stylesheets" href="customers.scss">
+    </style>
+  </head>
+  <body>
+    <div class="current-user">
+      <h1><%= current_user.name %></h1>
+      <p> <%= current_user.city %>, <%= current_user.state %> </p>
+      <p> Number of reviews: <%= current_user.reviews.count %> </p>
+    </div>
 
-<p><%= link_to "My Reviews", customer_reviews_path(current_user) %></p>
-<p><%= link_to "Locate a Business", businesses_path %></p>
-<p> Choose a Category </p>
+    <p><%= link_to "Reviews", customer_reviews_path(current_user) %></p>
+    <p><%= link_to "Write a Review", businesses_path %></p>
+  </body>
+</html>
