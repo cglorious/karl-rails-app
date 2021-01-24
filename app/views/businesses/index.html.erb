@@ -3,7 +3,6 @@
 <% @businesses.each do |b| %>
   <div>
     <h4><%=link_to b.name, business_path(b) %></h4>
-    <!-- add link to show page -->
     <p><%= b.city %>, <%= b.state %></p>
     <p><%= b.category.name %></p>
     <p>Price Range: <%= b.price_range %></p>

@@ -1,5 +1,23 @@
 #Reviewer App
 
+##User Stories
+- As Albus, I want an app to help me find a local restaurant so that I can eat a good meal.
+
+### Signup, Login, Logout, Omniauth
+[x] As Hermione, I want to sign up so I can create my account.
+[x] As Hermione, I want to login so I can use my account.
+[x] As Hermione, I want to logout so I can I can protect my information.
+[ ] As Ron, I want to use my Facebook credentials so I can sign in to the app easily.
+[ ] As Ron, I want to have access to a navigation bar so I can view my profile,
+
+### My Profile,
+[x] As Ron, I want to have access to view my reviews from my profile so I can remember restaurants I've visited.
+[x] As Ron, I want to view a page of local businesses so I can choose a restaurant to order my meal.
+
+### Business, Reviews
+[ ] As Harry, I want to view a restaurant's page so I can read reviews.
+[ ] As Harry, I want to add a review for a restaurant so I can rate the restaurant for other customers.
+
 ##Models
 
 ###Business
