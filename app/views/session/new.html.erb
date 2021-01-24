@@ -18,17 +18,19 @@
           <p><%= flash[:message] if flash[:message] %></p>
 
           <%= form_for :customer do |f| %>
-          <div>
             <%= f.label :email %><br>
+            <div class="field">
             <%= f.email_field :email, required: true %>
-          </div>
+            </div>
           <br>
-          <div>
+          <div class="field">
             <%= f.label :password %><br>
             <%= f.password_field :password %>
           </div>
 
-          <p><%= f.submit "Log in"%></p>
+          <p><%= f.submit "Log in", class:"button"%></p>
+
+          <!-- How to add class to f.submit? -->
 
         <% end %>
 
@@ -38,6 +40,8 @@
           <p><img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></p>
         </div>
       </div>
+
+
 
   </body>
 </html>
