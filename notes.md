@@ -7,17 +7,24 @@
 [x] As Hermione, I want to sign up so I can create my account.
 [x] As Hermione, I want to login so I can use my account.
 [x] As Hermione, I want to logout so I can I can protect my information.
+[ ] As Hermione, I want to be able to have an account that is unique to my email address.
+[ ] As Hermione, I want to have admin access so I can add a business.
 [ ] As Ron, I want to use my Facebook credentials so I can sign in to the app easily.
-[ ] As Ron, I want to have access to a navigation bar so I can view my profile,
+[x] As Ron, I want to have access to a navigation bar so I can view my profile, the homepage, and log out at anytime.
 
 ### My Profile
 [x] As Ron, I want to have access to view my reviews from my profile so I can remember restaurants I've visited.
 [x] As Ron, I want to view a page of local businesses so I can choose a restaurant to order my meal.
 
 ### Business, Reviews
-[x] As Harry, I want to view a restaurant's page so I can read reviews.
-[ ] As Harry, I want to add a review for a restaurant so I can rate the restaurant for other customers.
-[ ] As Harry, I want to access another person's profile so I can see which restaurants they recommend.
+[x] As Harry, I want to view a restaurant's page so I can read reviews from other customers.
+[ ] As Harry, I want to determine a restaurant's average rating so I can decide whether I want to buy food from that restaurant.
+[ ] As Harry, I want to add a review for a restaurant so I can provide a rating to help other customers make a meal decision.
+[x] As Harry, I want to access another person's reviews so I can see which restaurants they recommend.
+
+### Categories
+[ ] As Hagrid, I want to search for restaurants by category so I can choose which places serve breakfast.
+[ ] As Hagrid, I want to show only businesses by breakfast so I can choose a restaurant.
 
 
 

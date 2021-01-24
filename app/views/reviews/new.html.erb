@@ -1,1 +1,18 @@
-<p>reviews#new</p>
+<p>Review for <%= @business.name %></p>
+
+<!-- flash message -->
+
+<%= form_for(@review) do |f| %>
+  <div>
+    <%= f.label :rating %><br>
+    <%= f.text_field :rating %></div>
+    <br>
+  <div>
+  <%= f.label :content %><br>
+  <%= f.text_area :content %></div>
+
+  <%= f.hidden_field :customer_id, :value => current_user.id %>
+  <%= f.hidden_field :business_id, :value => @review.business.id %>
+
+  <p><%= f.submit %></p>
+<% end %>
