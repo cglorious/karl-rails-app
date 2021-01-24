@@ -3,9 +3,22 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 h1#home{
   font-family: Arial, Helvetica, sans-serif;
-  color: #F43939;
-  font-size: 40px;
-  text-align: center
+  font-size: 75px;
+  text-align: center;
+  padding-top: 225px;
+  font-variant: small-caps;
+}
+.myDiv {
+    position: relative;
+    z-index: 1;
+}
+div.static{
+  position: absolute;
+  z-index: -1;
+  background-image: url("https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/92624767_10158284150076944_1312871936455344128_o.jpg?_nc_cat=111&ccb=2&_nc_sid=8024bb&_nc_ohc=QKzwiRACSAIAX9357yn&_nc_ht=scontent-sjc3-1.xx&oh=101a7f91e582ccf62f8f91a3bdcb2b3c&oe=6034977E");
+  opacity: 0.4;
+  height: 550px;
+  width: 100%;
 }
 ul {
   list-style-type: none;
