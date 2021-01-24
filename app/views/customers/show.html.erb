@@ -1,5 +1,6 @@
 <p>Welcome, <%= current_user.name %>!</p>
 <p> <%= current_user.city %>, <%= current_user.state %> </p>
+<p> Number of reviews: <%= current_user.reviews.count %> </p>
 
 <p><%= link_to "My Reviews", customer_reviews_path(current_user) %></p>
 <p><%= link_to "Locate a Business", businesses_path %></p>

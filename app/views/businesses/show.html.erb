@@ -1,10 +1,17 @@
-<h4><%= @business.name %></h4>
-<p><%= @business.city %>, <%= @business.state %></p>
-<p><%= @business.category.name %></p>
+<h1><%= @business.name %></h1>
+
+<!-- <p>Average rating:</p> -->
+
+<p><%= @business.reviews.count %> reviews</p>
+<!-- pluralize feature -->
+<p><%= @business.category.name %><br></p>
 <p>Price Range: <%= @business.price_range %></p>
+
 <br>
-<h4>Reviews for <%= @business.name %></h4>
-<p>Number of reviews: <%= @business.reviews.count %></p>
+<h4>Location</h4>
+<p><%= @business.city %>, <%= @business.state %></p>
+<br>
+<h4>Recommended Reviews</h4>
 <!-- Average Rating -->
 <% @business.reviews.each do |r| %>
   <p><em><%=link_to r.customer.name, customer_reviews_path(r.customer) %></em> wrote a review.</p>
@@ -12,4 +19,4 @@
   <p><%= r.content %></p>
   <br>
 <% end %>
-<p><%= link_to ("Write a Review for " + @business.name), new_business_review_path(@business) %></p>
+<p><%= link_to ("Start your review of " + @business.name + "."), new_business_review_path(@business) %></p>

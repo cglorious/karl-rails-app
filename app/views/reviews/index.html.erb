@@ -1,13 +1,10 @@
-<h3>
 <% if @customer %>
-  Reviews by <%= @customer.name %>
+  <h3> Reviews by <%= @customer.name %> </h3>
+  <p>Number of reviews: <%= @customer.reviews.count %><p>
 <% elsif @business %>
-  Reviews of <%= @business.name %>
-<% else %>
-  All Reviews
-
+  <h3>Reviews of <%= @business.name %></h3>
+  <p>Number of reviews: <%= @business.reviews.count %></p>
 <% end %>
-</h3>
 
 <% @reviews.each do |r| %>
   <p><strong><%= link_to r.business.name, business_path(r.business) %></strong></p>
