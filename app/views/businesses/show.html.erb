@@ -2,5 +2,14 @@
 <p><%= @business.city %>, <%= @business.state %></p>
 <p><%= @business.category.name %></p>
 <p>Price Range: <%= @business.price_range %></p>
-
-<p><%= link_to "Add a Review", new_business_review_path(@business) %></p>
+<br>
+<h4>Reviews for <%= @business.name %></h4>
+<p>Number of reviews: <%= @business.reviews.count %></p>
+<!-- Average Rating -->
+<% @business.reviews.each do |r| %>
+  <p><em><%= r.customer.name %></em> wrote a review.</p>
+  <p>Rating: <%= r.rating %></p>
+  <p><%= r.content %></p>
+  <br>
+<% end %>
+<p><%= link_to ("Write a Review for " + @business.name), new_business_review_path(@business) %></p>

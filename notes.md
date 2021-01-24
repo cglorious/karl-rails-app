@@ -10,13 +10,16 @@
 [ ] As Ron, I want to use my Facebook credentials so I can sign in to the app easily.
 [ ] As Ron, I want to have access to a navigation bar so I can view my profile,
 
-### My Profile,
+### My Profile
 [x] As Ron, I want to have access to view my reviews from my profile so I can remember restaurants I've visited.
 [x] As Ron, I want to view a page of local businesses so I can choose a restaurant to order my meal.
 
 ### Business, Reviews
-[ ] As Harry, I want to view a restaurant's page so I can read reviews.
+[x] As Harry, I want to view a restaurant's page so I can read reviews.
 [ ] As Harry, I want to add a review for a restaurant so I can rate the restaurant for other customers.
+[ ] As Harry, I want to access another person's profile so I can see which restaurants they recommend.
+
+
 
 ##Models
 
