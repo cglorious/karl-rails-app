@@ -27,3 +27,37 @@ div.current-user{
   display: table;
   clear: both;
 }
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid gray;
+}
+#facebook{
+  background-color: #1877F2;
+}
+#facebook:hover{
+  opacity: 0.75;
+  color: white;
+}
+#google{
+  background-color: white;
+  color: black;
+}
+#google:hover{
+  opacity: 0.75;
+  background-color: lightgray;
+  color: black;
+}
+#apple{
+  background-color: black;
+}
+#apple:hover{
+  opacity: 0.75;
+  color: white;
+}
