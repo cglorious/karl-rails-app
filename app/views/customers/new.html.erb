@@ -5,12 +5,12 @@
       <link rel="stylesheets" href="customers.scss">
     </style>
   </head>
-<body>
+<body class="columns-align">
 
   <div class="row">
     <div class="column">
 
-      <h2 style="color:#D32323;">Sign Up for Reviewer</h2>
+      <h2 class="session-header">Sign Up for Reviewer</h2>
       <h4>Connect with great local businesses</h4>
 
       <%= render 'session/form' %>
@@ -45,7 +45,7 @@
         <p><%= f.submit "Sign Up" %></p>
 
         <!-- How to add class to f.submit? -->
-        
+
       <% end %>
     </div>
     <div class="column">

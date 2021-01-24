@@ -13,3 +13,97 @@
  *= require_tree .
  *= require_self
  */
+
+ /* Navigation bar */
+ * {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ }
+ ul.nav-bar {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #D32323;
+ }
+
+ .nav-bar li {
+   float: right;
+ }
+
+ .nav-bar li a {
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+ }
+
+ li a:hover {
+   background-color: #a81c1c;
+ }
+
+ /* Sign up/Log in page */
+ h2.session-header {
+   color: #D32323;
+ }
+ * {
+   box-sizing: border-box;
+ }
+ .column {
+   float: left;
+   width: 50%;
+   padding: 100px;
+   height: 450px;
+   text-align: center;
+ }
+ .row:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+ .block {
+   width: 60%;
+   border: none;
+   color: white;
+   padding: 14px 28px;
+   left: 50%;
+   font-size: 16px;
+   cursor: pointer;
+   text-align: center;
+   border: 1px solid gray;
+ }
+ #facebook{
+   background-color: #1877F2;
+ }
+ #facebook:hover{
+   opacity: 0.75;
+   color: white;
+ }
+ #google{
+   background-color: white;
+   color: black;
+ }
+ #google:hover{
+   opacity: 0.75;
+   background-color: lightgray;
+   color: black;
+ }
+ #apple{
+   background-color: black;
+ }
+ #apple:hover{
+   opacity: 0.75;
+   color: white;
+ }
+ #customer_email, #customer_password, #customer_name, #customer_state, #customer_city{
+   width: 60%;
+   padding: 7px 28px;
+   font-size: 16px;
+   text-align: left;
+ }
+ #btn-default{
+   width: 60%;
+   padding: 7px 28px;
+   font-size: 16px;
+   color: white;
+ }

@@ -1,75 +1,10 @@
 // Place all the styles related to the Customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-body{
-  font-family: Arial, Helvetica, sans-serif;
-}
-h2#sign-up{
-  color: red
-}
-div.current-user{
-  padding: 40px;
-  background-color: #F5F5F5;
-}
-* {
-  box-sizing: border-box;
-  text-align: center
-
-}
-.column {
-  float: left;
-  width: 50%;
-  padding: 100px;
-  height: 450px;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.block {
-  width: 60%;
-  border: none;
-  color: white;
-  padding: 14px 28px;
-  left: 50%;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-  border: 1px solid gray;
-}
-#facebook{
-  background-color: #1877F2;
-}
-#facebook:hover{
-  opacity: 0.75;
-  color: white;
-}
-#google{
-  background-color: white;
-  color: black;
-}
-#google:hover{
-  opacity: 0.75;
-  background-color: lightgray;
-  color: black;
-}
-#apple{
-  background-color: black;
-}
-#apple:hover{
-  opacity: 0.75;
-  color: white;
-}
-#customer_email, #customer_password, #customer_name, #customer_state, #customer_city{
-  width: 60%;
-  padding: 7px 28px;
-  font-size: 16px;
+body {
   text-align: left;
 }
-#btn-default{
-  width: 60%;
-  padding: 7px 28px;
-  font-size: 16px;
-  color: white;
+div.current-user-block{
+  padding: 40px;
+  background-color: #F5F5F5;
 }

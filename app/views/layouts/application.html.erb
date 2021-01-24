@@ -12,7 +12,7 @@
 
   <body>
 
-    <ul>
+    <ul class="nav-bar">
       <% if logged_in? %>
         <li><a class="navbar-brand"rel="nofollow" data-method="delete" href="/logout">Log Out</a></li>
       <% else %>
@@ -25,7 +25,7 @@
         <li><%= link_to "Sign Up", signup_path %></li>
       <% end %>
 
-      <li><a class="navbar-brand" href="http://127.0.0.1:3000">Home</a></li>
+      <li><%= link_to "Home", "http://127.0.0.1:3000" %></li>
     </ul>
 
     <%= yield %>
