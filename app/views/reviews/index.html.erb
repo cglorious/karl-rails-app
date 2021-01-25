@@ -1,14 +1,28 @@
-<% if @customer %>
-  <h3> Reviews by <%= @customer.name %> </h3>
-  <p>Number of reviews: <%= @customer.reviews.count %><p>
-<% elsif @business %>
-  <h3>Reviews of <%= @business.name %></h3>
-  <p>Number of reviews: <%= @business.reviews.count %></p>
-<% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      <link rel="stylesheets" href="reviews.scss">
+    </style>
+  </head>
+<body>
 
-<% @reviews.each do |r| %>
-  <p><strong><%= link_to r.business.name, business_path(r.business) %></strong></p>
-  <p>Rating: <%= r.rating %></p>
-  <p><%= r.content %></p>
-  <br>
-<% end %>
+  <section class="reviewer-block">
+    <div>
+      <%= render 'reviews' %>
+    </div>
+  </section>
+
+  <container>
+  <% @reviews.each do |r| %>
+    <div class="review">
+      <p><img class="review-picture" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="OctoCat"><strong>  <%= link_to r.business.name, business_path(r.business) %></strong><br>
+        Rating: <%= r.rating %></p>
+      <p><%= r.content %></p>
+    </div>
+    <br>
+  <% end %>
+  </container>
+  
+  </body>
+</html>

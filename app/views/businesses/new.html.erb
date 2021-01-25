@@ -1,7 +1,5 @@
 <h1>Add a new Business</h1>
 
-<h2 style="color:orange;"> form_for option </h2>
-
 <%= form_for(@business) do |f| %>
   <div>
   <%= f.label :name %><br>
@@ -23,41 +21,6 @@
   <%= f.text_field :price_range %>
   <br>
   <p><%= collection_select(:business, :category_id, Category.all, :id, :name, prompt: "Choose a category") %></p>
-  <!-- category not being set -->
 
   <p><%= f.submit %></p>
-<% end %>
-
-<h2 style="color:orange;"> form_tag option </h2>
-
-<%= form_tag('/businesses', method: :post) do %>
-
-  <div class="form-group">
-    <%= collection_select(:business, :name, Category.all, :id, :name, prompt: "Choose a category") %>
-  </div>
-  <br>
-  <div class="form-group">
-    <%= label_tag(:name) %><br>
-    <%= text_field_tag(:name) %>
-  </div>
-  <br>
-  <div class="form-group">
-    <%= label_tag(:city) %><br>
-    <%= text_field_tag(:city) %>
-  </div>
-  <br>
-  <div class="form-group">
-    <%= label_tag(:state) %><br>
-    <%= text_field_tag(:state) %>
-  </div>
-  <br>
-  <div class="form-group">
-    <%= label_tag(:price_range) %><br>
-    <%= text_field_tag(:price_range) %>
-  </div>
-  <br>
-
-  <div class="actions">
-    <p><%= submit_tag("Add Business") %></p>
-  </div>
 <% end %>

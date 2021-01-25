@@ -1,0 +1,7 @@
+<% if @customer %>
+  <h1> Reviews by <%= @customer.name %> </h1>
+  <p>Number of reviews: <%= @customer.reviews.count %><p>
+<% elsif @business %>
+  <h1>Reviews of <%= @business.name %></h1>
+  <p>Number of reviews: <%= @business.reviews.count %></p>
+<% end %>
