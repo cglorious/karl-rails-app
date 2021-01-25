@@ -42,6 +42,19 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    background-color: #a81c1c;
  }
 
+/* Footer */
+ .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   margin: 0;
+   width: 100%;
+   padding: 14px 16px;
+   background-color: #D32323;
+   text-align: center;
+   color: white;
+}
+
  /* Sign up/Log in page */
  h2.session-header {
    color: #D32323;
