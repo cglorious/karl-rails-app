@@ -1,22 +1,26 @@
-<h1><%= @business.name %></h1>
+<section class="top-block">
+  <div>
+    <h1><%= @business.name %></h1>
+    <p>Location: <%= @business.city %>, <%= @business.state %></p>
+    <p><%= @business.reviews.count %> reviews | <%= @business.category.name %> | Price Range: <%= @business.price_range %></p>
+  </div>
+</section>
 
-<!-- <p>Average rating:</p> -->
+<h2 style="text-align:center;">Recommended Reviews</h2>
 
-<p><%= @business.reviews.count %> reviews</p>
-<!-- pluralize feature -->
-<p><%= @business.category.name %><br></p>
-<p>Price Range: <%= @business.price_range %></p>
-
-<br>
-<h4>Location</h4>
-<p><%= @business.city %>, <%= @business.state %></p>
-<br>
-<h4>Recommended Reviews</h4>
-<!-- Average Rating -->
+<container>
 <% @business.reviews.each do |r| %>
-  <p><em><%=link_to r.customer.name, customer_reviews_path(r.customer) %></em> wrote a review.</p>
+<div class="division">
+  <p class="business-url"><strong><%=link_to r.customer.name, customer_reviews_path(r.customer) %></strong> <%=" wrote a review."%></p>
   <p>Rating: <%= r.rating %></p>
-  <p><%= r.content %></p>
-  <br>
+  <p><%= r.content %><br>
+  </p>
+</div>
+<br>
 <% end %>
-<p><%= link_to ("Start your review of " + @business.name + "."), new_business_review_path(@business) %></p>
+</container>
+
+<section class="options-block" style="background-color: #191919;">
+  <br>
+  <p><a class="options-url" href=<%= new_business_review_path(@business) %>><button class="options-btn">Start your review of <%= @business.name%>.</button></a></p>
+</section>

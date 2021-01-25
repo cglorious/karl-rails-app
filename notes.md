@@ -16,6 +16,8 @@
 [x] As Ron, I want to have access to view my reviews from my profile so I can remember restaurants I've visited.
 [x] As Ron, I want to view a page of local businesses so I can choose a restaurant to order my meal.
 [x] As Ron, I want to edit my profile.
+[ ] As Ron, I want to navigate to a clean profile edit page so I can enjoy my user experience.
+[ ] As Ron, I want to navigate to from a drop down menu on the tool bar so I can enjoy my user experience.
 [x] As Myrtle, I want to delete my profile.
 
 ### Business, Reviews

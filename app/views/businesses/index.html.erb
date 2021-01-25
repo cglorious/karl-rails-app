@@ -19,10 +19,11 @@
   <container>
 <% @businesses.each do |b| %>
   <div class="division">
-    <p class="business-url"><strong><%=link_to b.name, business_path(b) %></strong><br><br>
+    <p class="business-url"><strong><%=link_to b.name, business_path(b) %></strong><br>
     <%= b.city %>, <%= b.state %><br>
     <%= b.category.name %><br>
-    Price Range: <%= b.price_range %></p>
+    Price Range: <%= b.price_range %><br>
+    </p>
   </div>
   <br>
 <% end %>
