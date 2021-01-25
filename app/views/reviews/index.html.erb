@@ -7,7 +7,7 @@
   </head>
 <body>
 
-  <section class="reviewer-block">
+  <section class="top-block">
     <div>
       <%= render 'reviews' %>
     </div>
@@ -15,14 +15,19 @@
 
   <container>
   <% @reviews.each do |r| %>
-    <div class="review">
-      <p><img class="review-picture" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="OctoCat"><strong>  <%= link_to r.business.name, business_path(r.business) %></strong><br>
+    <div class="division">
+      <p class="business-url"><img class="review-picture" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="OctoCat"><strong>  <%= link_to r.business.name, business_path(r.business) %></strong><br>
         Rating: <%= r.rating %></p>
       <p><%= r.content %></p>
+
+      <% if current_user == @customer %>
+        <p class="review-url-edit" style="text-align:right;"><%= link_to "Edit", edit_customer_review_path(current_user, r) %></p>
+      <% end %>
+
     </div>
     <br>
   <% end %>
   </container>
-  
+
   </body>
 </html>

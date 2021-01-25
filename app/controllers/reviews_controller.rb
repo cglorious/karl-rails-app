@@ -18,9 +18,19 @@ class ReviewsController < ApplicationController
     if (review = Review.create(review_params))
       redirect_to business_path(review.business)
     else
-      #flash message
       render new_business_review(review.business)
     end
+  end
+
+  def edit
+    @review = Review.find_by(id: params[:id])
+  end
+
+  def update
+    binding.pry
+    @review = Review.find_by(id: params[:id])
+    @review.update(review_params)
+    redirect_to customer_path(current_user)
   end
 
   private

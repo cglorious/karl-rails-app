@@ -1,14 +1,34 @@
-<h1>Your Next Review Awaits</h1>
-<p>Review your local businesses.</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      <link rel="stylesheets" href="businesses.scss">
+    </style>
+  </head>
+  <body>
 
-<h2>See the business you'd like to review?</h2>
+    <section class="top-block">
+      <div>
+        <h1>Your Next Review Awaits</h1>
+        <p>Review your local businesses.</p>
+      </div>
+    </section>
+
+<h2 style="text-align:center;">See the business you'd like to review?</h2>
+
+  <container>
 <% @businesses.each do |b| %>
-  <div>
-    <h4><%=link_to b.name, business_path(b) %></h4>
-    <p><%= b.city %>, <%= b.state %></p>
-    <p><%= b.category.name %></p>
-    <p>Price Range: <%= b.price_range %></p>
+  <div class="division">
+    <p class="business-url"><strong><%=link_to b.name, business_path(b) %></strong><br><br>
+    <%= b.city %>, <%= b.state %><br>
+    <%= b.category.name %><br>
+    Price Range: <%= b.price_range %></p>
   </div>
+  <br>
 <% end %>
+  </container>
 
-<p><%= link_to "Add a Business", new_business_path %></p>
+  <%= render 'add' %>
+
+  </body>
+</html>

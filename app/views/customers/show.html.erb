@@ -29,15 +29,9 @@
       <p><a class="options-url" href="/businesses"><button class="options-btn" >Write a Review</button></a></p>
     </section>
 
-    <!-- add hover effect over buttons -->
-
-    <% if current_user.admin? %>
-
-    <section class="options-block" style="background-color: #D32323;">
-      <p><a class="options-url" href=<%= new_business_path %>><button class="options-btn"  >Add A Business</button></a></p>
-    </section>
-
-    <% end %>
+    <!-- add mouseover effect over buttons -->
+    
+    <%= render 'businesses/add' %>
 
   </body>
 </html>

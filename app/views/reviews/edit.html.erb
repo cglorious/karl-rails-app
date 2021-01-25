@@ -1,0 +1,22 @@
+<!-- Adjust edits for review -->
+
+<p>Edit review for <%= @review.business.name %></p>
+
+<%= form_for(@review) do |f| %>
+<div>
+  <%= f.label :rating %><br>
+  <%= f.text_field :rating %>
+</div>
+<br>
+<div>
+  <%= f.label :content %><br>
+  <%= f.text_area :content %>
+</div>
+<br>
+
+  <%= f.hidden_field :customer_id, :value => @review.customer_id %>
+  <%= f.hidden_field :business_id, :value => @review.business_id %>
+
+<p><%= f.submit "Edit Review"%></p>
+
+<% end %>

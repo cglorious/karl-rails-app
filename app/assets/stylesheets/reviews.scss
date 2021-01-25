@@ -1,12 +1,7 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.reviewer-block {
-  padding: 40px;
-  background-color: #F5F5F5;
-  height: 200px;
-}
-.review {
+.division {
   border-radius: 25px;
   border: 2px solid #191919;
   padding: 20px;
@@ -18,4 +13,13 @@
   margin-left:15px;
   float: left;
   padding: 2px;
+}
+p.review-url-edit a:link{
+  color: gray;
+}
+p.review-url-edit a:visited{
+  color: gray;
+}
+p.review-url-edit a, p.review-url a, {
+  text-decoration: none;
 }
