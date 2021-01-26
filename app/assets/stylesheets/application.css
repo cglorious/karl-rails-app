@@ -14,17 +14,27 @@
  *= require_self
  */
 
+/* format */
  * {
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
  }
+  .top-block {
+    padding: 40px;
+    background-color: #F5F5F5;
+    height: 200px;
+  }
+  .division {
+    border-radius: 25px;
+    border: 2px solid #191919;
+    padding: 20px;
+    height: 175px;
+  }
 
-  /* Nav bar */
-
+  /* nav bar */
   .topnav {
     overflow: hidden;
     background-color: #D32323;
   }
-
   .topnav a {
     float: right;
     color: white;
@@ -33,7 +43,6 @@
     text-decoration: none;
     font-size: 17px;
   }
-
   .topnav a:hover {
     background-color: #a81c1c;
     color: white;
@@ -45,19 +54,6 @@
     background-color: #4CAF50;
     color: white;
   }
-
-/* Footer */
- .footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   margin: 0;
-   width: 100%;
-   padding: 14px 16px;
-   background-color: #D32323;
-   text-align: center;
-   color: white;
-}
 
  /* entry */
  h2.session-header {
@@ -160,6 +156,20 @@ a:visited{
  .submit-btn:hover{
    opacity: 0.75;
  }
+
+ /* footer */
+
+  .footer {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    padding: 14px 16px;
+    bottom: 0;
+    left:0;
+    background-color: #D32323;
+    text-align: center;
+    color: white;
+ }
  .out-btn {
    background-color: #D32323;
    color: white;
@@ -171,20 +181,6 @@ a:visited{
    font-size: 16px;
  }
  .out-btn:hover{
-   opacity: 0.75;
-   color: white;
+   color: #191919;
    cursor: pointer;
- }
-
-/* format */
- .top-block {
-   padding: 40px;
-   background-color: #F5F5F5;
-   height: 200px;
- }
- .division {
-   border-radius: 25px;
-   border: 2px solid #191919;
-   padding: 20px;
-   height: 175px;
  }
