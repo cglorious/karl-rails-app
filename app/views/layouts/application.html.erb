@@ -7,31 +7,31 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
+
   </head>
 
   <body>
 
-    <ul class="nav-bar">
+    <div class="topnav">
       <% if logged_in? %>
-        <li><a class="navbar-brand"rel="nofollow" data-method="delete" href="/logout">Log Out</a></li>
+        <%= link_to "My Profile", customer_path(current_user) %>
+        <%= link_to "Edit Profile", edit_customer_path(current_user) %>
       <% else %>
-        <li><%= link_to "Log In", login_path %></li>
+        <%= link_to "Log In", login_path %>
+        <%= link_to "Sign Up", signup_path %>
       <% end %>
 
-      <% if logged_in? %>
-        <li><%= link_to "My Profile", customer_path(current_user) %></li>
-        <li> <%= link_to "Edit Profile", edit_customer_path(current_user) %> </li>
-      <% else %>
-        <li><%= link_to "Sign Up", signup_path %></li>
-      <% end %>
-
-      <li><%= link_to "Home", "http://127.0.0.1:3000" %></li>
-    </ul>
+      <%= link_to "Home", "http://127.0.0.1:3000" %>
+    </div>
 
     <%= yield %>
 
     <footer class="footer">
+      <% if logged_in? %>
+        <div><%= form_tag logout_path, :method => 'delete' do %> 
+          <%= submit_tag "Logout", :class => "out-btn" %> 
+          <% end %></div>
+      <% end %>
       <small class="small">&copy; 2021 <strong>Karl</strong></small>
     </footer>
   </body>

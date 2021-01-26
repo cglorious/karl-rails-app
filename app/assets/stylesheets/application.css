@@ -14,33 +14,37 @@
  *= require_self
  */
 
- /* Navigation bar */
  * {
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
- }
- ul.nav-bar {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
-   background-color: #D32323;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
  }
 
- .nav-bar li {
-   float: right;
- }
+  /* Nav bar */
 
- .nav-bar li a {
-   display: block;
-   color: white;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
- }
+  .topnav {
+    overflow: hidden;
+    background-color: #D32323;
+  }
 
- li a:hover {
-   background-color: #a81c1c;
- }
+  .topnav a {
+    float: right;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover {
+    background-color: #a81c1c;
+    color: white;
+  }
+  .topnav a:visited {
+    color: white;
+  }
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
 
 /* Footer */
  .footer {
@@ -55,7 +59,7 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    color: white;
 }
 
- /* Sign up/Log in page */
+ /* entry */
  h2.session-header {
    color: #D32323;
  }
@@ -69,20 +73,12 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    height: 1000px;
    text-align: center;
  }
-/* .column-1 {
-   background-color: orange;
- } */
  .column-1 div {
-   /* background-color: purple; */
    width:400px;
    max-width:500px;
    display: inline-block;
  }
- /*.column-2 {
-   background-color: pink;
- }*/
  .column-2 div {
-   /* background-color: red; */
    width:400px;
    max-width:500px;
    display: inline-block;
@@ -93,23 +89,35 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    clear: both;
  }
 
- /* Buttons */
+/* links */
+a:link{
+  color: #191919;
+  text-decoration: none;
+}
+a:visited{
+  color: #D32323;
+  text-decoration: none;
+}
+
+ /* buttons */
  .block-btn {
    width: 60%;
    border: none;
-   color: white;
+   color: black;
    padding: 14px 28px;
    left: 50%;
    font-size: 16px;
    cursor: pointer;
    text-align: center;
    border: 1px solid gray;
+   background-color: #BEBEBE;
+   font-weight: bold;
+ }
+ .block-btn:hover{
+   opacity: 0.75;
  }
  #facebook{
    background-color: #1877F2;
- }
- #facebook:hover{
-   opacity: 0.75;
    color: white;
  }
  #google{
@@ -117,15 +125,11 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    color: black;
  }
  #google:hover{
-   opacity: 0.75;
    background-color: #E0E0E0;
    color: black;
  }
  #apple{
    background-color: black;
- }
- #apple:hover{
-   opacity: 0.75;
    color: white;
  }
  #customer_email, #customer_password, #customer_name, #customer_state, #customer_city{
@@ -140,8 +144,39 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-size: 16px;
    color: white;
  }
+ .submit-btn {
+   width: 40%;
+   border: none;
+   color: black;
+   padding: 7px 14px;
+   left: 50%;
+   font-size: 16px;
+   cursor: pointer;
+   text-align: center;
+   border: 1px solid gray;
+   background-color: #BEBEBE;
+   font-weight: bold;
+ }
+ .submit-btn:hover{
+   opacity: 0.75;
+ }
+ .out-btn {
+   background-color: #D32323;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+ }
+ .out-btn:hover{
+   opacity: 0.75;
+   color: white;
+   cursor: pointer;
+ }
 
-/* Page Formatting */
+/* format */
  .top-block {
    padding: 40px;
    background-color: #F5F5F5;
@@ -152,11 +187,4 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    border: 2px solid #191919;
    padding: 20px;
    height: 175px;
- }
- p.business-url a:link{
-   color: #191919;
-   text-decoration: none;
- }
- p.business-url a:visited{
-   color: #D32323;
  }

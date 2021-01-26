@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   root 'static#home'
   get '/login', to: 'session#new'
   post '/login', to: 'session#create'
-  #Should these have visible paths?
   delete '/logout', to: 'session#destroy'
-  delete '/delete', to: 'customers#destroy'
 
   resources :categories do
     resources :businesses, only: [:new, :create, :index]

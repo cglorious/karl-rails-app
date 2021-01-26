@@ -35,4 +35,27 @@ a.options-url {
   opacity: 0.75;
   background-color: #E0E0E0;
   color: black;
+  cursor: pointer;
+}
+
+.edit-customer{
+  width: 50%;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.form-label{
+  font-weight: bold;
+}
+
+.delete-acct-btn{
+  color: #D32323;
+  border: none;
+  padding: 10px 15px;
+  background-color: white;
+  font-weight: bold;
+}
+.delete-acct-btn:hover{
+  color: #191919;
+  cursor: pointer;
 }

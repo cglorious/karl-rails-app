@@ -1,3 +1,27 @@
 // Place all the styles related to the session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* login and sign-up input */
+
+.enter-btn {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  background-color: #D32323;
+  font-size: 16px;
+  border: none;
+}
+
+.enter-btn {
+  width: 60%;
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  left: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid gray;
+}

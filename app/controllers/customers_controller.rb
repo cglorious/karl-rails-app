@@ -32,7 +32,8 @@ class CustomersController < ApplicationController
   end
 
   def destroy
-    current_user.delete
+    @customer = Customer.find_by(id: params[:id])
+    @customer.delete
     redirect_to root_path
   end
 

@@ -5,32 +5,35 @@
   </div>
 </section>
 
+<section class="edit-customer">
+  <%= form_for(@customer) do |f| %>
+  <div>
+    <%= f.label :name, :class => "form-label"%><br>
+    <%= f.text_field :name, :class => "form-input" %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :city, :class => "form-label" %><br>
+    <%= f.text_field :city, :class => "form-input" %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :state, :class => "form-label" %><br>
+    <%= f.text_field :state, :class => "form-input" %>
+  </div>
+  <br>
 
-<%= form_for(@customer) do |f| %>
-<div>
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
-</div>
-<br>
-<div>
-  <%= f.label :city %><br>
-  <%= f.text_field :city %>
-</div>
-<br>
-<div>
-  <%= f.label :state %><br>
-  <%= f.text_field :state %>
-</div>
-<br>
+  <div>
+    <%= f.check_box :admin %> <%= f.label :admin, "Check box if you are a business owner" %>
+  </div>
+  <br>
 
-<div>
-  <%= f.label :admin, "Check box if you are a business owner" %><br>
-  <%= f.check_box :admin %>
-</div>
-<br>
+  <div> <%= f.submit "Edit", :class => 'out-btn' %></div>
 
-<p><%= f.submit "Edit"%></p>
-
-<% end %>
-
-<a data-method="delete" href="/delete">Delete Account</a>
+  <% end %>
+</section>
+  <div class= "edit-page-btn">
+  <%= form_tag customer_path(@customer), :method => 'delete' do %> 
+      <%= submit_tag "Delete Account", :class => 'delete-acct-btn' %> 
+    <% end %>
+  </div>
