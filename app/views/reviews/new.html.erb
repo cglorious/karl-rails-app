@@ -9,13 +9,14 @@
 <%= form_for(@review) do |f| %>
   <div>
   <br>
-  <%= f.label :rating, :class => "form-label"  %><br>
-  <%= f.radio_button :rating, 1 %> 1
-  <%= f.radio_button :rating, 2 %> 2
-  <%= f.radio_button :rating, 3 %> 3
-  <%= f.radio_button :rating, 4 %> 4
-  <%= f.radio_button :rating, 5 %> 5
+  <%= f.label :rating, :class => "form-label"  %><br><br>
+  <%= f.radio_button :rating, 1 %> One <br>
+  <%= f.radio_button :rating, 2 %> Two <br>
+  <%= f.radio_button :rating, 3 %> Three <br>
+  <%= f.radio_button :rating, 4 %> Four <br>
+  <%= f.radio_button :rating, 5 %> Five <br>
   </div>
+  <br>
   <div>
   <%= f.label :content, :class => "form-label"  %><br>
   <span>
