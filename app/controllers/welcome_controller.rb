@@ -2,6 +2,16 @@ class WelcomeController < ApplicationController
   skip_before_action :verified_user
 
   def create
+    pp request.env['omniauth.auth']
+    session[:name] = request.env['omniauth.auth']['info']['name']
+    session[:omniauth_data] = request.env['omniauth.auth']
+
+    redirect_to customers_path
+  end
+
+  #ERROR: undefined variable 'auth'
+
+  #def create
     #if auth
     #  @customer = Customer.find_or_create_by(email: auth['info']['email'])
     #  binding.pry
@@ -12,13 +22,7 @@ class WelcomeController < ApplicationController
     #else
     #  redirect_to signup_path
     #end
-
-    pp request.env['omniauth.auth']
-    session[:name] = request.env['omniauth.auth']['info']['name']
-    session[:omniauth_data] = request.env['omniauth.auth']
-
-    redirect_to customers_path
-  end
+  #end
 
   #protected
 

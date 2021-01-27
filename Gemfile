@@ -5,9 +5,9 @@ ruby '2.6.1'
 
 gem 'omniauth','~> 1.9.1'
 gem 'omniauth-github'
+gem 'dotenv-rails'
 #gem 'omniauth-facebook'
 #gem 'omniauth-google-oauth2'
-gem 'dotenv-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.0'
