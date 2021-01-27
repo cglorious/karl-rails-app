@@ -27,10 +27,15 @@ class ReviewsController < ApplicationController
   end
 
   def update
-    binding.pry
     @review = Review.find_by(id: params[:id])
     @review.update(review_params)
     redirect_to customer_path(current_user)
+  end
+
+  def destroy
+    @review = Review.find_by(id: params[:id])
+    @review.delete
+    redirect_to customer_path
   end
 
   private
