@@ -35,8 +35,8 @@
 
 ### Business, Reviews
 - [ ] As Harry, I want to determine a restaurant's average rating so I can decide whether I want to buy food from that restaurant.
-- [ ] As Hagrid, I want to edit my reviews.
-- [ ] As Myrtle, I want to delete my reviews.
+- [x] As Hagrid, I want to edit my reviews.
+- [x] As Myrtle, I want to delete my reviews.
 
 ### Categories
 - [ ] As Hagrid, I want to search for restaurants by category so I can choose which places serve breakfast.
