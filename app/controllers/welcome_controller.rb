@@ -3,19 +3,21 @@ class WelcomeController < ApplicationController
 
   def create
     if auth
-      #binding.pry
+      binding.pry
       @customer = Customer.find_or_create_by(email: auth['info']['email'])
-      @customer.each do |c|
+      if @customer.each do |c|
         c.password = "password"
       end
       redirect_to customers_path
     else
       redirect_to signup_path
     end
+  end
 
   private
 
   def auth
     request.env['omniauth.auth']
   end
+
 end
