@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
-  get '/signup', to: 'customers#new'
   root 'static#home'
+
+  get '/signup', to: 'customers#new'
   get '/login', to: 'session#new'
   post '/login', to: 'session#create'
+
+  match '/auth/:developer/callback', to: 'welcome#create', via: [:get, :post]
+
   delete '/logout', to: 'session#destroy'
 
   resources :categories do
