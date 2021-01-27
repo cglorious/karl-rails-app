@@ -29,6 +29,12 @@
   <% end %>
   </container>
 
+  <div class= "edit-page-btn">
+  <%= form_tag customer_path(@customer), :method => 'delete' do %> 
+      <%= submit_tag "Delete Account", :class => 'delete-acct-btn' %> 
+    <% end %>
+  </div>
+
   <div class="push"></div>
 
   </body>

@@ -33,9 +33,10 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+    binding.pry
     @review = Review.find_by(id: params[:id])
     @review.delete
-    redirect_to customer_path
+    redirect_to customer_path(@review.customer)
   end
 
   private

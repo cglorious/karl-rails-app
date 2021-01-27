@@ -31,4 +31,11 @@
 <% end %>
 </section>
 
+<div class= "edit-page-btn">
+<%= form_tag review_path(@review), :method => 'delete' do %> 
+    <%= submit_tag "Delete Review", :class => 'delete-acct-btn' %> 
+  <% end %>
+</div>
+
+
 <div class="push"></div>
