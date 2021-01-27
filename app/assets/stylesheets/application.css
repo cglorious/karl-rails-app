@@ -184,3 +184,26 @@ a:visited{
    color: #191919;
    cursor: pointer;
  }
+
+ /* form buttons */
+ .form-submit-btn {
+   background-color: #D32323;
+   color: white;
+   border: none;
+   text-align: center;
+   padding: 10px 20px;
+   text-decoration: none;
+   font-size: 17px;
+ }
+ .form-submit-btn:hover {
+   background-color: #a81c1c;
+   color: white;
+   cursor: pointer;
+ }
+ .form-submit-btn:visited {
+   color: white;
+ }
+ .form-submit-btn.active {
+   background-color: #4CAF50;
+   color: white;
+ }

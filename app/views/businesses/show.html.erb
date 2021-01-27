@@ -11,10 +11,15 @@
 <container>
 <% @business.reviews.each do |r| %>
 <div class="division">
-  <p class="business-url"><strong><%=link_to r.customer.name, customer_reviews_path(r.customer) %></strong> <%=" wrote a review."%></p>
+  <p class="business-url"> <img class="review-picture" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="OctoCat"> <strong><%=link_to r.customer.name, customer_reviews_path(r.customer) %></strong> <%=" wrote a review."%></p>
   <p>Rating: <%= r.rating %></p>
   <p><%= r.content %><br>
   </p>
+
+  <% if current_user == r.customer %>
+    <p class="review-url-edit" style="text-align:right;"><%= link_to "Edit", edit_customer_review_path(current_user, r) %></p>
+  <% end %>
+
 </div>
 <br>
 <% end %>

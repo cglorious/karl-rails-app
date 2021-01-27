@@ -5,29 +5,34 @@
   </div>
 </section>
 
+<section class="form-section">
 <%= form_for(@business) do |f| %>
-  <div>
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
+
+  <div class="select">
+    <%= collection_select(:business, :category_id, Category.all, :id, :name, prompt: "Choose a category") %></p>
   </div>
   <br>
   <div>
-  <%= f.label :city %><br>
-  <%= f.text_field :city %>
+  <%= f.label :name, :class => "form-label" %><br>
+  <%= f.text_field :name, :class => "form-input" %>
   </div>
   <br>
   <div>
-  <%= f.label :state %><br>
-  <%= f.text_field :state %>
+  <%= f.label :city, :class => "form-label" %><br>
+  <%= f.text_field :city, :class => "form-input" %>
+  </div>
+  <br>
+  <div>
+  <%= f.label :state, :class => "form-label" %><br>
+  <%= f.text_field :state, :class => "form-input" %>
   </div>
   <br>
   <!-- How to make drop down only from 1-4? -->
-  <%= f.label :price_range %><br>
-  <%= f.text_field :price_range %>
-  <br>
-  <p><%= collection_select(:business, :category_id, Category.all, :id, :name, prompt: "Choose a category") %></p>
+  <%= f.label :price_range, :class => "form-label" %><br>
+  <%= f.text_field :price_range, :class => "form-input" %>
 
-  <p><%= f.submit %></p>
+  <p><%= f.submit "Add Business", :class => 'form-submit-btn' %></p>
 <% end %>
+</section>
 
 <div class="push"></div>

@@ -19,7 +19,7 @@
   <container>
 <% @businesses.each do |b| %>
   <div class="division">
-    <p class="business-url"><strong><%=link_to b.name, business_path(b) %></strong><br>
+    <p class="business-url"><img class="review-picture" src="https://www.creativefabrica.com/wp-content/uploads/2019/08/Restaurant-Logo-by-Koko-Store-580x386.jpg" alt="OctoCat"><strong><%=link_to b.name, business_path(b) %></strong><br>
     <%= b.city %>, <%= b.state %><br>
     <%= b.category.name %><br>
     Price Range: <%= b.price_range %><br>

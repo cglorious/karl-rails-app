@@ -1,20 +1,33 @@
-<p>Review for <%= @business.name %></p>
+<section class="top-block">
+  <div>
+    <h1>Tell us about <%= @business.name %>.</h1>
+    <p> Write a review. </p>
+  </div>
+</section>
 
-<!-- flash message -->
-
+<section class="form-section">
 <%= form_for(@review) do |f| %>
   <div>
-    <%= f.label :rating %><br>
-    <%= f.text_field :rating %></div>
-    <br>
+  <br>
+  <%= f.label :rating, :class => "form-label"  %><br>
+  <%= f.radio_button :rating, 1 %> 1
+  <%= f.radio_button :rating, 2 %> 2
+  <%= f.radio_button :rating, 3 %> 3
+  <%= f.radio_button :rating, 4 %> 4
+  <%= f.radio_button :rating, 5 %> 5
+  </div>
   <div>
-  <%= f.label :content %><br>
-  <%= f.text_area :content %></div>
+  <%= f.label :content, :class => "form-label"  %><br>
+  <span>
+  <%= f.text_area :content, :class => "form-review-content" %>
+  </span>
+  </div>
 
   <%= f.hidden_field :customer_id, :value => current_user.id %>
   <%= f.hidden_field :business_id, :value => @review.business.id %>
 
-  <p><%= f.submit %></p>
+  <p><%= f.submit "Add Review", :class => 'form-submit-btn' %></p>
 
   <div class="push"></div>
 <% end %>
+</section>

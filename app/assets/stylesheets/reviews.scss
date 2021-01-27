@@ -14,12 +14,16 @@
   float: left;
   padding: 2px;
 }
-p.review-url-edit a:link{
-  color: gray;
-}
-p.review-url-edit a:visited{
-  color: gray;
-}
-p.review-url-edit a, p.review-url a, {
-  text-decoration: none;
+
+/* form - review-content */
+.form-review-content{
+  width: 60%;
+  padding: 4px 4px;
+  font-size: 16px;
+  text-align: left;
+  display: block;
+  overflow: hidden;
+  resize: both;
+  min-height: 40px;
+  line-height: 40px;
 }

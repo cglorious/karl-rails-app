@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 body {
   text-align: left;
+
+/* section header */
 }
 section.current-user-block{
   padding: 40px;
@@ -13,6 +15,8 @@ img#profile-pic {
   padding: .5em;
   float: left;
 }
+
+/* my profile - reviews */
 .options-block{
   padding: 40px;
   background-color: #191919;
@@ -38,16 +42,21 @@ a.options-url {
   cursor: pointer;
 }
 
-.edit-customer{
+/* form */
+.form-section{
   width: 50%;
   padding-top: 20px;
   padding-left: 20px;
 }
-
 .form-label{
   font-weight: bold;
 }
-
+.form-input{
+  width: 60%;
+  padding: 4px 4px;
+  font-size: 16px;
+  text-align: left;
+}
 .delete-acct-btn{
   color: #D32323;
   border: none;
@@ -58,4 +67,8 @@ a.options-url {
 .delete-acct-btn:hover{
   color: #191919;
   cursor: pointer;
+}
+
+.edit-profile-link{
+  float:right;
 }

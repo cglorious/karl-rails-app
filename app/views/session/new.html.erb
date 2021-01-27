@@ -31,8 +31,6 @@
 
           <p><%= f.submit "Log in", :class => "submit-btn" %></p>
 
-          <!-- How to add class to f.submit? -->
-
         <% end %>
         </div>
         </container>
@@ -42,22 +40,6 @@
           <br>
           <p><img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></p>
         </div>
-
-        <p>We will put omniauth authentication data here (if present)</p>
-
-        <% if name = session[:name] %>
-          <p>Welcome <%= name -%>! We know who you are thanks to Omniauth!</p>
-          <p>You were authenticated by  <%= session[:omniauth_data]['provider'] %></p>
-
-          The raw data returned from Omniauth were:
-          <pre>
-            <%= session[:omniauth_data] %>
-          </pre>
-        <% else %>
-          <p>No authentication information is available.</p>
-          <p>Try <%= link_to 'Signing in with the developer strategy', '/auth/developer'%>.</p>
-          <p>Try <%= link_to 'Signing in with the GitHub strategy', '/auth/github'%>.</p>
-        <% end %>
       </container>
 
       </div>
