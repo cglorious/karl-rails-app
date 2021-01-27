@@ -15,6 +15,10 @@ class SessionController < ApplicationController
     end
   end
 
+  def omni_login
+    binding.pry
+  end
+
   def destroy
     session.clear
     redirect_to root_path
