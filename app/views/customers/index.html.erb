@@ -1,1 +1,4 @@
-<p>Hello, your email is <%= @customer.email %>. You logged in using OmniAuth!</p>
+The raw data returned from Omniauth were:
+<pre>
+  <%= session[:omniauth_data] %>
+</pre>

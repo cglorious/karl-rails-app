@@ -14,7 +14,6 @@ class BusinessesController < ApplicationController
 
   def create
     business = Business.create(business_params)
-    binding.pry
     if business.save
       redirect_to business_path(business)
     else

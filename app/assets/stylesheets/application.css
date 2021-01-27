@@ -50,7 +50,7 @@
   .topnav a:visited {
     color: white;
   }
-  .topnav a.active {
+  .topnav a.=:active {
     background-color: #4CAF50;
     color: white;
   }
@@ -124,7 +124,7 @@ a:visited{
    background-color: #E0E0E0;
    color: black;
  }
- #apple{
+ #apple, #git-hub{
    background-color: black;
    color: white;
  }

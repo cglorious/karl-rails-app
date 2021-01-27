@@ -1,9 +1,8 @@
 <div>
   <p><Button id="facebook" class="block-btn" type="button"><strong>Continue with Facebook</strong></button></p>
   <p><Button id="google" class="block-btn" type="button"><strong>Continue with Google</strong></button></p>
-  <p><Button id="apple" class="block-btn" type="button"><strong>Continue with Apple</strong></button></p>
-
-  <p>Try <%= link_to 'the GitHub strategy', '/auth/github'%>.</p>
+  <!-- <p><Button id="apple" class="block-btn" type="button"><strong>Continue with Apple</strong></button></p> -->
+  <p><Button id="git-hub" class="block-btn" type="button"><%= link_to 'Continue with GitHub', '/auth/github', :class => 'omniauth-btn' %></button></p>
 
   <!-- HTTPS required -->
   <p>Try <%= link_to 'the Facebook strategy', '/auth/google_oauth2'%>.</p>
