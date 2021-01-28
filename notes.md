@@ -43,6 +43,10 @@
 - [ ] As Hagrid, I want to show only businesses by breakfast so I can choose a restaurant.
 
 
+### User Ideas
+- [ ] change business to SF neighborhood
+- [ ] picture icon for profile
+
 
 ###Models
 

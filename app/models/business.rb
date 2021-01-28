@@ -3,4 +3,5 @@ class Business < ApplicationRecord
   has_many :customers
   has_many :reviews
   has_many :customers, through: :reviews
+  validates :name, presence: true
 end

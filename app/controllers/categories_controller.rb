@@ -1,10 +1,3 @@
 class CategoriesController < ApplicationController
-  def index
-  end
-
-  def new
-  end
-
-  def create
-  end
+  skip_before_action :verified_user, only: :new
 end

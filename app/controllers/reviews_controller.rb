@@ -15,10 +15,13 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    if (review = Review.create(review_params))
+    review = Review.create(review_params)
+    if review.save
       redirect_to business_path(review.business)
     else
-      render new_business_review(review.business)
+      message = review.errors.full_messages.join
+      flash[:message] = message
+      redirect_to new_business_review_path(review_params[:business_id])
     end
   end
 
