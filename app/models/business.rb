@@ -6,16 +6,24 @@ class Business < ApplicationRecord
   validates :name, :price_range, presence: true
 
   def average_rating
-    @ratings = []
-    @count = self.reviews.count.to_f
-    @sum = 0
+    if self.reviews.count > 0
+      @ratings = []
+      @count = self.reviews.count.to_f
+      @sum = 0
 
-    self.reviews.each do |review|
-      @ratings << review.rating
+      self.reviews.each do |review|
+        @ratings << review.rating
+      end
+
+      @total = @ratings.inject(:+).to_f
+
+      (@total / @count).round(2)
+    else
+      "none available"
     end
-
-    @total = @ratings.inject(:+).to_f
-
-    (@total / @count).round(2)
+    #how to account for NaN
   end
+
+  #def dollar_price_range
+  #end
 end

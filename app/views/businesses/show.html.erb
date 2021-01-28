@@ -2,11 +2,19 @@
   <div>
     <h1><%= @business.name %></h1>
     <p>Location: <%= @business.city %>, <%= @business.state %></p>
-    <p><%= @business.reviews.count %> reviews | <%= @business.category.name %> | Price Range: <%= @business.price_range %></p>
+    <p><%= @business.category.name %> | Price Range: <%= @business.price_range %> |
+    Average rating: <%= @business.average_rating %></p>
   </div>
 </section>
 
-<h2 style="text-align:center;">Recommended Reviews</h2>
+<div style="text-align:center;">
+<h2>Recommended Reviews</h2>
+<% if @business.reviews.count > 0 %>
+  <p> Number of reviews: <%= @business.reviews.count %> </p>
+<% else %>
+  <p> Be the first to write a review. </p>
+<% end %>
+</div>
 
 <container>
 <% @business.reviews.each do |r| %>
