@@ -3,5 +3,19 @@ class Business < ApplicationRecord
   has_many :customers
   has_many :reviews
   has_many :customers, through: :reviews
-  validates :name, presence: true
+  validates :name, :price_range, presence: true
+
+  def average_rating
+    @ratings = []
+    @count = self.reviews.count.to_f
+    @sum = 0
+
+    self.reviews.each do |review|
+      @ratings << review.rating
+    end
+
+    @total = @ratings.inject(:+).to_f
+
+    (@total / @count).round(2)
+  end
 end

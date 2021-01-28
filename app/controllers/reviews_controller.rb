@@ -21,6 +21,7 @@ class ReviewsController < ApplicationController
     else
       message = review.errors.full_messages.join
       flash[:message] = message
+      #render :action => :create
       redirect_to new_business_review_path(review_params[:business_id])
     end
   end
@@ -36,7 +37,6 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    binding.pry
     @review = Review.find_by(id: params[:id])
     @review.delete
     redirect_to customer_path(@review.customer)

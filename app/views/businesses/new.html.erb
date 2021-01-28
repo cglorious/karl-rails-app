@@ -5,6 +5,8 @@
   </div>
 </section>
 
+<p style="color:red;"><em><%= flash[:message] if flash[:message] %></em></p>
+
 <section class="form-section">
 <%= form_for(@business) do |f| %>
 
