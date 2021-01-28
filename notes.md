@@ -34,7 +34,7 @@
 - [ ] As Ron, I want to navigate to from a drop down menu on the tool bar so I can enjoy my user experience.
 
 ### Business, Reviews
-- [ ] As Harry, I want to determine a restaurant's average rating so I can decide whether I want to buy food from that restaurant.
+- [x] As Harry, I want to determine a restaurant's average rating so I can decide whether I want to buy food from that restaurant.
 - [x] As Hagrid, I want to edit my reviews.
 - [x] As Myrtle, I want to delete my reviews.
 
@@ -64,7 +64,6 @@
 - has_many :businesses
 - has_many :reviews
 - has_many :businesses, through: :reviews
-- has_many :categories, through: :reviews
 - email, password_digest, city, state
 - helper methods: location
 - Stretch: admin functionality, image

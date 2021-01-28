@@ -4,14 +4,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.1'
 #ruby '3.0.0'
 
-#gem 'omniauth','~> 1.9.1'
-gem 'omniauth'
-#gem 'omniauth-github'
+gem 'omniauth','~> 1.9.1'
+#gem 'omniauth'
+gem 'omniauth-github'
 gem 'dotenv-rails'
 #gem 'omniauth-facebook'
 
 #gem 'omniauth-oauth2', '~> 1.6.0'
-gem 'omniauth-google-oauth2'
+#gem 'omniauth-google-oauth2'
 #gem 'omniauth-google-oauth2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

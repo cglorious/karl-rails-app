@@ -44,10 +44,11 @@ class CustomersController < ApplicationController
       :name,
       :email,
       :password,
-      :city,
-      :state,
       :admin
     )
   end
+
+  #:city,
+  #:state,
 
 end

@@ -7,10 +7,7 @@ Rails.application.routes.draw do
   post '/login', to: 'session#create'
   delete '/logout', to: 'session#destroy'
 
-  #match '/auth/github/callback', to: 'welcome#create', via: [:get, :post]
-  #match '/auth/google_oauth2/callback', to: 'welcome#create', via: [:get, :post]
-
-  get '/auth/:provider/callback' => 'sessions#omni_login'
+  get '/auth/:provider/callback', to: 'session#create'
 
   resources :categories do
     resources :businesses, only: [:new, :create, :index]
