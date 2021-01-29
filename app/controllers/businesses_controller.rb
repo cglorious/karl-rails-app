@@ -30,7 +30,13 @@ class BusinessesController < ApplicationController
   private
 
   def business_params
-    params.require(:business).permit(:name, :price_range, :city, :state, :category_id)
+    params.require(:business).permit(
+      :name,
+      :price_range,
+      :city,
+      :state,
+      :category_id
+    )
   end
 
 end

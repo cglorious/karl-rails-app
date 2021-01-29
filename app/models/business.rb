@@ -21,9 +21,6 @@ class Business < ApplicationRecord
     else
       "none available"
     end
-    #how to account for NaN
   end
-
-  #def dollar_price_range
-  #end
+  
 end
