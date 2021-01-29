@@ -18,11 +18,7 @@
             <h1><%= current_user.name %></h1>
           <% end %>
 
-          <% if current_user.city && current_user.state %>
-            <p> <%= current_user.city %>, <%= current_user.state %> </p>
-          <% else %>
-            <p><%= link_to "Add your location here", edit_customer_path(current_user), :class => 'edit-profile-link' %></p>
-          <% end %>
+          <p> <%= current_user.location %> </p>
 
           <p> Number of reviews: <%= current_user.reviews.count %> </p>
         <div>

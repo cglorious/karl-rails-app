@@ -21,7 +21,6 @@ class ReviewsController < ApplicationController
     else
       message = review.errors.full_messages.join
       flash[:message] = message
-      #render :action => :create
       redirect_to new_business_review_path(review_params[:business_id])
     end
   end

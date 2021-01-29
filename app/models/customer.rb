@@ -5,6 +5,6 @@ class Customer < ApplicationRecord
   #belongs_to :category, through: :businesses
   has_secure_password
   validates :email, uniqueness: true
-  validates :name, presence: true
+  validates :name, :location, :password, presence: true
 
 end

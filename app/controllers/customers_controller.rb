@@ -6,10 +6,10 @@ class CustomersController < ApplicationController
   end
 
   def create
-    customer = Customer.create(customer_params)
-    if customer.save
-      session[:user_id] = customer.id
-      redirect_to customer_path(customer)
+    @customer = Customer.create(customer_params)
+    if @customer.save
+      session[:user_id] = @customer.id
+      redirect_to customer_path(@customer)
     elsif
       message = customer.errors.full_messages.join(", ")
       flash[:message] = message
@@ -26,9 +26,10 @@ class CustomersController < ApplicationController
   end
 
   def update
-    customer = Customer.find_by(id: params[:id])
-    customer.update(customer_params)
-    redirect_to customer_path(customer)
+    @customer = Customer.find_by(id: params[:id])
+    @customer.update(customer_params)
+    raise "show".inspect
+    redirect_to customer_path(@customer)
   end
 
   def destroy
@@ -44,11 +45,9 @@ class CustomersController < ApplicationController
       :name,
       :email,
       :password,
-      :admin
+      :admin,
+      :location
     )
   end
-
-  #:city,
-  #:state,
 
 end

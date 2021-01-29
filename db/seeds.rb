@@ -14,10 +14,11 @@ karma = Business.create(name: "Karma Cafe", city: "San Francisco", state: "CA", 
 papalote = Business.create(name: "Papalote Mexican Grill", city: "San Francisco", state: "CA", price_range: 2, category: lunch)
 sisig = Business.create(name: "Senor Sisig", city: "San Francisco", state: "CA", price_range: 2, category: dinner)
 
-carolyn = Customer.create(name: "Carolyn", email: "carolyn@me.com", city: "New York" , state: "NY" , password: "carolyn")
-robbie = Customer.create(name: "Robbie", email: "robbie@me.com", city: "Berkeley" , state: "CA" , password: "robbie")
-david = Customer.create(name: "David", email: "david@me.com", city: "Davis" , state: "CA" , password: "david")
-maya = Customer.create(name: "Maya", email: "maya@me.com", city: "San Francisco" , state: "CA" , password: "maya")
+carolyn = Customer.create(name: "Carolyn", email: "carolyn@me.com", location: "New York, NY", password: "carolyn", admin: true)
+robbie = Customer.create(name: "Robbie", email: "robbie@me.com", location: "Berkeley, CA", password: "robbie")
+david = Customer.create(name: "David", email: "david@me.com", location: "Davis, CA", password: "david")
+maya = Customer.create(name: "Maya", email: "maya@me.com", location: "San Francisco, CA" , password: "maya")
+peyton = Customer.create(name: "Peyton", email: "peyton@me.com", location: "Honolulu, HI" , password: "maya")
 
 karma_1 = Review.create(content: "I love this place. It's adorable, such friendly folks, and a delightful and fresh cafe menu. I love their BLT: so much bacon!!!!!!", rating: 5, customer: carolyn, business: karma)
 karma_2 = Review.create(content: "Very delicious paninis and smoothies here! I like how they always make a little extra and pour the rest into a separate cup for Togo. The guy who helped me out provided great service and recommendations! I would come back if I'm in the area.", rating: 5, customer: robbie, business: karma)
