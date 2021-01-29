@@ -28,7 +28,7 @@ class CustomersController < ApplicationController
   def update
     @customer = Customer.find_by(id: params[:id])
     @customer.update(customer_params)
-    raise "show".inspect
+    #binding.pry
     redirect_to customer_path(@customer)
   end
 

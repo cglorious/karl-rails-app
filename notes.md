@@ -8,7 +8,7 @@
 - [x] As Hermione, I want to login so I can use my account.
 - [x] As Hermione, I want to logout so I can I can protect my information.
 - [x] As Hermione, I want to be able to have an account that is unique to my email address.
-- [ ] As Ron, I want to use my Facebook credentials so I can sign in to the app easily.
+- [x] As Ron, I want to use my GitHub credentials so I can sign in to the app easily.
 - [x] As Ron, I want to have access to a navigation bar so I can view my profile, the homepage, and log out at anytime.
 
 ### My Profile
@@ -44,7 +44,7 @@
 
 
 ### User Ideas
-- [ ] change business to SF neighborhood
+- [ ] change business location to SF neighborhoods
 - [ ] picture icon for profile
 
 
