@@ -25,7 +25,6 @@ class SessionController < ApplicationController
         session[:user_id] = @customer.id
         redirect_to customer_path(@customer)
       else
-        #binding.pry
         message = "Unable to locate account. Please try again or sign up."
         flash[:message] = message
         redirect_to login_path

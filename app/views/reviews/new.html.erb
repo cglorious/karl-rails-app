@@ -1,36 +1,24 @@
-<section class="top-block">
-  <div>
-    <h1>Tell us about <%= @business.name %>.</h1>
-    <p> Write a review. </p>
-  </div>
-</section>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      <link rel="stylesheets" href="reviews.scss">
+    </style>
+  </head>
+  <body class="columns-align">
 
-<p style="color:red;"><em><%= flash[:message] if flash[:message] %></em></p>
+    <section class="top-block">
+      <div>
+        <h1>Tell us about <%= @business.name %>.</h1>
+        <p> Write a review. </p>
+      </div>
+    </section>
 
-<section class="form-section">
-<%= form_for(@review) do |f| %>
-  <div>
-  <br>
-  <p><%= f.label :rating, :class => "form-label"  %></p>
-  <p><%= f.radio_button :rating, 1 %> One - Poor </p>
-  <p><%= f.radio_button :rating, 2 %> Two - Fair </p>
-  <p><%= f.radio_button :rating, 3 %> Three - Good </p>
-  <p><%= f.radio_button :rating, 4 %> Four - Very Good </p>
-  <p><%= f.radio_button :rating, 5 %> Five - Excellent </p>
-  </div>
-  <br>
-  <div>
-  <%= f.label :content, :class => "form-label"  %><br>
-  <span>
-  <%= f.text_area :content, :class => "form-review-content" %>
-  </span>
-  </div>
+    <p class="field-with-errors"><%= flash[:message] if flash[:message] %></p>
 
-  <%= f.hidden_field :customer_id, :value => current_user.id %>
-  <%= f.hidden_field :business_id, :value => @review.business.id %>
+    <%= render 'new_form' %>
 
-  <p><%= f.submit "Add Review", :class => 'form-submit-btn' %></p>
+    <div class="push"></div>
 
-  <div class="push"></div>
-<% end %>
-</section>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+
+<section class="form-section">
+<%= form_for(@review) do |f| %>
+  <div>
+  <br>
+  <p><%= f.label :rating, :class => "form-label"  %></p>
+  <p><%= f.radio_button :rating, 1 %> One - Poor </p>
+  <p><%= f.radio_button :rating, 2 %> Two - Fair </p>
+  <p><%= f.radio_button :rating, 3 %> Three - Good </p>
+  <p><%= f.radio_button :rating, 4 %> Four - Very Good </p>
+  <p><%= f.radio_button :rating, 5 %> Five - Excellent </p>
+  </div>
+<br>
+<div>
+  <%= f.label :content, :class => "form-label" %><br>
+  <%= f.text_area :content, :class => "form-review-content" %>
+</div>
+<br>
+
+  <%= f.hidden_field :customer_id, :value => @review.customer_id %>
+  <%= f.hidden_field :business_id, :value => @review.business_id %>
+
+<p><%= f.submit "Edit Review", :class => 'form-submit-btn' %></p>
+
+<% end %>
+</section>
