@@ -1,7 +1,7 @@
-###Reviewer App
+### Reviewer App
 
-###User Stories
-- As Albus, I want an app to help me find a local restaurant so that I can eat a good meal.
+### User Stories
+- [x] As Albus, I want an app to help me find a local restaurant so that I can eat a good meal.
 
 ### Signup, Login, Logout
 - [x] As Hermione, I want to sign up so I can create my account.
@@ -25,7 +25,7 @@
 - [x] As Harry, I want to access another person's reviews so I can see which restaurants they recommend.
 - [x] As Hagrid, I want to have admin access so I can add a business.
 
-###Stretch goals
+### Stretch goals
 
 ### Signup, Login, Logout
 - [ ] As Ron, I want to sign up with only my name, email, and password and update my profile later so I can sign in quickly.
@@ -48,9 +48,9 @@
 - [ ] picture icon for profile
 
 
-###Models
+### Models:
 
-###Business
+### Business
 - belongs_to :customer
 - belongs_to :category
 - has_many :reviews
@@ -60,7 +60,7 @@
 - Stretch: image, website, street_address, zip_code, dining_options (delivery, takeout, dine-in)
 * adjust city, state to zip_code; change price_range to integer; phone_number as string; add default value to rating
 
-###Customer
+### Customer
 - has_many :businesses
 - has_many :reviews
 - has_many :businesses, through: :reviews
@@ -69,13 +69,13 @@
 - Stretch: admin functionality, image
 * adjust city, state to zip_code
 
-###Review * join table joining users and businesses
+### Review * join table joining users and businesses
 - belongs_to :customer
 - belongs_to :business
 - content, rating, review_date
 - Stretch: image
 
-###Category
+### Category
 - has_many :businesses
 - has_many :customers, through: :businesses
 - name
