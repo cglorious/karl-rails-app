@@ -158,7 +158,6 @@ a:visited{
  }
 
  /* footer */
-
   .footer {
     position: relative;
     margin: 0;
@@ -206,4 +205,11 @@ a:visited{
  .form-submit-btn.active {
    background-color: #4CAF50;
    color: white;
+ }
+
+ /* errors */
+
+ .field-with-errors{
+   color: red;
+   font-style: italic;
  }

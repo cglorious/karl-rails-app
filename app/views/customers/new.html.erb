@@ -16,7 +16,7 @@
 
       <%= render 'session/btns' %>
 
-      <p style="color:red;"><em><%= flash[:message] if flash[:message] %></em></p>
+      <p class="field-with-errors"><%= flash[:message] if flash[:message] %></p>
 
         <%= render 'form' %>
 

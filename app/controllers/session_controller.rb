@@ -19,14 +19,16 @@ class SessionController < ApplicationController
       end
         session[:user_id] = @customer.id
         redirect_to customer_path(@customer)
-    elsif
+    else
       @customer = Customer.find_by(email: params[:customer][:email])
       if @customer && @customer.authenticate(params[:customer][:password])
         session[:user_id] = @customer.id
         redirect_to customer_path(@customer)
       else
-        flash[:message] = "Please enter correct log in information."
-        redirect_to '/login'
+        #binding.pry
+        message = "Unable to locate account. Please try again or sign up."
+        flash[:message] = message
+        redirect_to login_path
       end
     end
   end

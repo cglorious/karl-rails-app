@@ -11,7 +11,7 @@ class CustomersController < ApplicationController
       session[:user_id] = @customer.id
       redirect_to customer_path(@customer)
     elsif
-      message = customer.errors.full_messages.join(", ")
+      message = @customer.errors.full_messages.join(", ")
       flash[:message] = message
       redirect_to signup_path
     end
@@ -28,6 +28,8 @@ class CustomersController < ApplicationController
   def update
     @customer = Customer.find_by(id: params[:id])
     @customer.update(customer_params)
+    #How do update customer_params and maintain password?
+    #binding.pry
     redirect_to customer_path(@customer)
   end
 
