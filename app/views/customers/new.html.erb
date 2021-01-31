@@ -12,9 +12,13 @@
         <div>
           <h2 class="session-header">Sign Up for Karl</h2>
           <h4>Connect with great local businesses</h4>
+
           <%= render 'session/btns' %>
+
           <p class="field-with-errors"><%= flash[:message] if flash[:message] %></p>
+
           <%= render 'form' %>
+          
         </div>
       </container>
 

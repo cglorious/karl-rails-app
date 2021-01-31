@@ -1,41 +1,38 @@
-<section class="top-block">
-  <div>
-    <h1><%= @business.name %></h1>
-    <p>Location: <%= @business.city %>, <%= @business.state %></p>
-    <p><%= @business.category.name %> | Price Range: <%= @business.price_range %> |
-    Average rating: <%= @business.average_rating %></p>
-  </div>
-</section>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      <link rel="stylesheets" href="businesses.scss">
+    </style>
+  </head>
+  <body>
 
-<div style="text-align:center;">
-<h2>Recommended Reviews</h2>
-<% if @business.reviews.count > 0 %>
-  <p> Number of reviews: <%= @business.reviews.count %> </p>
-<% else %>
-  <p> Be the first to write a review. </p>
-<% end %>
-</div>
+    <section class="top-block">
+      <div>
+        <h1><%= @business.name %></h1>
+        <p>Location: <%= @business.city %>, <%= @business.state %></p>
+        <p><%= @business.category.name %> | Price Range: <%= @business.price_range %> |
+        Average rating: <%= @business.average_rating %></p>
+      </div>
+    </section>
 
-<container>
-<% @business.reviews.each do |r| %>
-<div class="division">
-  <p class="business-url"> <img class="review-picture" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="OctoCat"> <strong><%=link_to r.customer.name, customer_reviews_path(r.customer) %></strong> <%=" wrote a review."%></p>
-  <p>Rating: <%= r.rating %></p>
-  <p><%= r.content %><br>
-  </p>
+    <div style="text-align:center;">
+    <h2>Recommended Reviews</h2>
+      <% if @business.has_reviews? %>
+        <p> Number of reviews: <%= @business.total_reviews %> </p>
+      <% else %>
+        <p> Be the first to write a review. </p>
+      <% end %>
+    </div>
 
-  <% if current_user == r.customer %>
-    <p class="review-url-edit" style="text-align:right;"><%= link_to "Edit", edit_customer_review_path(current_user, r) %></p>
-  <% end %>
+    <%= render 'business_reviews' %>
 
-</div>
-<br>
-<% end %>
-</container>
+    <section class="options-block" style="background-color: #191919;">
+      <br>
+      <p><a class="options-url" href=<%= new_business_review_path(@business) %>><button class="options-btn">Start your review of <%= @business.name%>.</button></a></p>
+    </section>
 
-<section class="options-block" style="background-color: #191919;">
-  <br>
-  <p><a class="options-url" href=<%= new_business_review_path(@business) %>><button class="options-btn">Start your review of <%= @business.name%>.</button></a></p>
-</section>
+    <div class="push"></div>
 
-<div class="push"></div>
+  </body>
+</html>

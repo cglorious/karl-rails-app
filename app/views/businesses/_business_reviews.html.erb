@@ -1,0 +1,17 @@
+<container>
+  <% @business.reviews.each do |r| %>
+    <div class="division">
+      <p class="business-url"> <img class="review-picture" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="OctoCat">
+        <strong><%=link_to r.customer.name, customer_reviews_path(r.customer) %></strong>
+        <%=" wrote a review.  "%>
+        |    Rating: <%= r.rating %></p>
+
+      <p><%= r.content %></p>
+
+        <% if current_user == r.customer %>
+          <p><%= link_to "Edit Review", edit_customer_review_path(current_user, r), :class => "edit-review" %></p>
+        <% end %>
+
+    </div><br>
+  <% end %>
+</container>

@@ -22,5 +22,13 @@ class Business < ApplicationRecord
       "none available"
     end
   end
-  
+
+  def has_reviews?
+    !!(self.reviews.count > 0)
+  end
+
+  def total_reviews
+    self.reviews.count
+  end
+
 end

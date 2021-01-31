@@ -53,3 +53,9 @@ select {
 .select:hover::after {
   color: #D32323;
 }
+
+/* Edit Review link */
+.edit-review:active, .edit-review:visited, .edit-review:hover  {
+  color: #D32323;
+  font-style: italics;
+}
