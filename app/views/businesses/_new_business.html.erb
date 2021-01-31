@@ -1,0 +1,34 @@
+<section class="form-section">
+  <%= form_for(@business) do |f| %>
+
+    <div class="select">
+      <%= collection_select(:business, :category_id, Category.all, :id, :name, prompt: "Choose a category") %></p>
+    </div><br>
+
+    <div>
+      <br>
+      <%= f.label :price_range, :class => "form-label"  %><br><br>
+      <%= f.radio_button :price_range, 1 %> $ - Inexpensive <br><br>
+      <%= f.radio_button :price_range, 2 %> $$ - Moderately Expensive <br><br>
+      <%= f.radio_button :price_range, 3 %> $$$ - Expensive <br><br>
+      <%= f.radio_button :price_range, 4 %> $$$$ - Very Expensive <br><br>
+    </div><br>
+
+    <div>
+      <%= f.label :name, :class => "form-label" %><br>
+      <%= f.text_field :name, :class => "form-input" %>
+    </div><br>
+
+    <div>
+      <%= f.label :city, :class => "form-label" %><br>
+      <%= f.text_field :city, :class => "form-input" %>
+    </div><br>
+
+    <div>
+      <%= f.label :state, :class => "form-label" %><br>
+      <%= f.text_field :state, :class => "form-input" %>
+    </div><br>
+
+    <p><%= f.submit "Add Business", :class => 'form-submit-btn' %></p>
+    <% end %>
+</section>
