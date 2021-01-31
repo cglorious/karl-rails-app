@@ -29,7 +29,7 @@ class CustomersController < ApplicationController
     @customer = Customer.find_by(id: params[:id])
     @customer.update(customer_params)
     #How do update customer_params and maintain password?
-    #binding.pry
+    binding.pry
     redirect_to customer_path(@customer)
   end
 

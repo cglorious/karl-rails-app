@@ -15,7 +15,8 @@
     </div><br>
 
     <%= f.hidden_field :email, :value => current_user.email %>
-    <!-- how to keep password the same -->
+    <!-- f.hidden_field :password, :value => current_user.password -->
+    <!-- how to keep password the same? -->
 
     <div> <%= f.submit "Edit", :class => 'form-submit-btn' %></div>
 
