@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+
   def index
     if params[:customer_id] && @customer = Customer.find_by(id: params[:customer_id])
       @reviews = @customer.reviews
@@ -51,4 +52,5 @@ class ReviewsController < ApplicationController
       :business_id
     )
   end
+  
 end

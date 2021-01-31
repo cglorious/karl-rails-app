@@ -20,5 +20,4 @@ class ApplicationController < ActionController::Base
     !!current_user.admin
   end
 
-
 end
