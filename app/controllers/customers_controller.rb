@@ -7,7 +7,7 @@ class CustomersController < ApplicationController
 
   def create
     @customer = Customer.create(customer_params)
-    if @customer.save
+    if @customer && @customer.authenticate(params[:customer][:password])
       session[:user_id] = @customer.id
       redirect_to customer_path(@customer)
     elsif
@@ -27,9 +27,9 @@ class CustomersController < ApplicationController
 
   def update
     @customer = Customer.find_by(id: params[:id])
-    @customer.update(customer_params)
-    #How do update customer_params and maintain password?
-    binding.pry
+    @customer.update(update_customer_params)
+    #How do save?
+    #binding.pry
     redirect_to customer_path(@customer)
   end
 
@@ -46,6 +46,15 @@ class CustomersController < ApplicationController
       :name,
       :email,
       :password,
+      :admin,
+      :location
+    )
+  end
+
+  #additional strong params for update option only
+  def update_customer_params
+    params.require(:customer).permit(
+      :name,
       :admin,
       :location
     )

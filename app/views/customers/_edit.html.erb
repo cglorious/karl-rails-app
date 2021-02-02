@@ -1,21 +1,21 @@
 <section class="form-section">
   <%= form_for(@customer) do |f| %>
-    <div>
+    <div class="field_with_errors">
       <%= f.label :name, :class => "form-label"%><br>
       <%= f.text_field :name, :class => "form-input" %>
     </div><br>
 
-    <div>
+    <div class="field_with_errors">
       <%= f.label :location, :class => "form-label" %><br>
       <%= f.text_field :location, :class => "form-input" %>
     </div><br>
 
-    <div>
+    <div class="field_with_errors">
       <%= f.check_box :admin %> <%= f.label :admin, "Check box if you are a business owner" %>
     </div><br>
 
-    <%= f.hidden_field :email, :value => current_user.email %>
-    <!-- f.hidden_field :password, :value => current_user.password -->
+    <!-- f.hidden_field :email, :value => current_user.email %>
+    <!-- f.hidden_field :password, :value => current_user.password %>
     <!-- how to keep password the same? -->
 
     <div> <%= f.submit "Edit", :class => 'form-submit-btn' %></div>
