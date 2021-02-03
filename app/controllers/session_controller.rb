@@ -7,6 +7,7 @@ class SessionController < ApplicationController
 
   def create
     if auth = request.env['omniauth.auth']
+
       if @customer = Customer.find_by(email: auth['info']['email'])
       else
         password = auth['info']['name'].split(" ")[0].downcase
@@ -17,10 +18,15 @@ class SessionController < ApplicationController
           location: "Earth, Solar System"
         )
       end
+
+      if @customer && @customer.authenticate(@customer.password)
         session[:user_id] = @customer.id
         redirect_to customer_path(@customer)
+      end
+
     else
       @customer = Customer.find_by(email: params[:customer][:email])
+
       if @customer && @customer.authenticate(params[:customer][:password])
         session[:user_id] = @customer.id
         redirect_to customer_path(@customer)
@@ -29,6 +35,7 @@ class SessionController < ApplicationController
         flash[:message] = message
         redirect_to login_path
       end
+
     end
   end
 
