@@ -16,7 +16,6 @@ class SessionController < ApplicationController
           password: password,
           location: "Earth, Solar System"
         )
-        #authenticate
       end
         session[:user_id] = @customer.id
         redirect_to customer_path(@customer)

@@ -27,9 +27,7 @@ class CustomersController < ApplicationController
 
   def update
     @customer = Customer.find_by(id: params[:id])
-    @customer.update(update_customer_params)
-    #How do save?
-    #binding.pry
+    @customer.update(customer_params)
     redirect_to customer_path(@customer)
   end
 
@@ -46,15 +44,6 @@ class CustomersController < ApplicationController
       :name,
       :email,
       :password,
-      :admin,
-      :location
-    )
-  end
-
-  #additional strong params for update option only
-  def update_customer_params
-    params.require(:customer).permit(
-      :name,
       :admin,
       :location
     )
