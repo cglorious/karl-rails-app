@@ -5,5 +5,6 @@ class Customer < ApplicationRecord
   has_secure_password
   validates :email, uniqueness: true
   validates :name, :location, presence: true
+  scope :admin, -> {where(admin: true)}
 
 end

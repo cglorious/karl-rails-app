@@ -4,6 +4,7 @@ class Business < ApplicationRecord
   has_many :reviews
   has_many :customers, through: :reviews
   validates :name, :price_range, presence: true
+  #scope :average_rating, :has_reviews?, :total_reviews
 
   def average_rating
     if self.reviews.count > 0
