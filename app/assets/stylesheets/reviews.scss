@@ -5,7 +5,7 @@
   border-radius: 25px;
   border: 2px solid #191919;
   padding: 20px;
-  height: 175px;
+  height: 200px;
 }
 .review-picture {
   width:90px;
@@ -26,4 +26,8 @@
   resize: both;
   min-height: 25px;
   line-height: 25px;
+}
+
+.url-edit {
+  text-align: right
 }

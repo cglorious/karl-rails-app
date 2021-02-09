@@ -5,7 +5,7 @@
     <p><%= r.content %></p>
 
       <% if current_user == @customer %>
-        <p class="review-url-edit" style="text-align:right;"><%= link_to "Edit", edit_customer_review_path(current_user, r) %></p>
+        <div class="url-edit"><%= link_to "Edit", edit_customer_review_path(current_user, r) %></div>
       <% end %>
 
   </div><br>

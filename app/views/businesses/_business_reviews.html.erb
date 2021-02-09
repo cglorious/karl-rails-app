@@ -9,7 +9,7 @@
       <p><%= r.content %></p>
 
         <% if current_user == r.customer %>
-          <p><%= link_to "Edit Review", edit_customer_review_path(current_user, r), :class => "edit-review" %></p>
+          <div class="url-edit"><%= link_to "Edit", edit_customer_review_path(current_user, r), :class => "edit-review" %></div>
         <% end %>
 
     </div><br>
