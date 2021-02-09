@@ -12,7 +12,7 @@
         <div>
           <br><br><br><br><br>
 
-          <% if current_user.admin? %>
+          <% if current_user.admin %>
             <h1><%= current_user.name + ", admin" %></h1>
           <% else %>
             <h1><%= current_user.name %></h1>
@@ -31,7 +31,7 @@
     </section>
 
     <section class="options-block">
-      <p><a class="options-url" href= <%= customer_reviews_path(current_user)%>><button class="options-btn">Reviews</button></a></p>
+      <p><a class="options-url" href= <%= customer_reviews_path(current_user)%>><button class="options-btn">My Reviews</button></a></p>
       <p><a class="options-url" href="/businesses"><button class="options-btn">Write a Review</button></a></p>
     </section>
 
