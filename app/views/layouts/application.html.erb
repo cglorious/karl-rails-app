@@ -21,6 +21,11 @@
       <% end %>
 
       <%= link_to "Home", "http://127.0.0.1:3000" %>
+
+      <% if logged_in? %>
+        <%= link_to "Most Reviews", business_path(Review.most_reviewed_business) %>
+      <% end %>
+
     </div>
 
     <%= yield %>
