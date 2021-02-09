@@ -9,14 +9,12 @@ class Business < ApplicationRecord
     if self.reviews.count > 0
       @ratings = []
       @count = self.reviews.count.to_f
-      @sum = 0
 
       self.reviews.each do |review|
         @ratings << review.rating
       end
 
       @total = @ratings.inject(:+).to_f
-
       (@total / @count).round(2)
     else
       "none available"
