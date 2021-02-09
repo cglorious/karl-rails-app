@@ -209,11 +209,7 @@ a:visited{
 
  /* errors */
 
-/* .field-with-errors{
-   background-color: red
- }*/
-
- .error-message{
-   color: red;
-   font-style: italic;
+.field-with-errors{
+  color: red;
+  font-style: italic;
  }

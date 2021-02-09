@@ -7,13 +7,13 @@ class CustomersController < ApplicationController
 
   def create
     @customer = Customer.create(customer_params)
-    if @customer && @customer.authenticate(params[:customer][:password])
-      session[:user_id] = @customer.id
-      redirect_to customer_path(@customer)
-    elsif
+    if !@customer.save
       message = @customer.errors.full_messages.join(", ")
       flash[:message] = message
       redirect_to signup_path
+    elsif @customer && @customer.authenticate(params[:customer][:password])
+      session[:user_id] = @customer.id
+      redirect_to customer_path(@customer)
     end
   end
 
