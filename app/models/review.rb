@@ -10,9 +10,7 @@ class Review < ApplicationRecord
       @array << r.business_id
     end
 
-    @sorted = @array.sort
-    #iterate through array to see which element occurred the most 
-    most = @sorted[0]
+    most = @array.max_by { |b| @array.count(b) }
     business = Business.find_by_id(most)
   end
 end
